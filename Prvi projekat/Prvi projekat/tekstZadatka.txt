@@ -1,0 +1,9 @@
+Zadatak 17:
+Kreirati Web server koji klijentu omogućava pretragu članaka korišćenjem New York Times API-
+a. Pretraga se može vršiti pomoću filtera koji se definišu u okviru query-a. Spisak članaka koji
+zadovoljavaju uslov se vraćaju kao odgovor klijentu (pretragu članaka vršiti po ključnoj reči). Svi
+zahtevi serveru se šalju preko browser-a korišćenjem GET metode. Ukoliko navedeni rezultati ne
+postoje, prikazati grešku klijentu.
+Primer poziva serveru: https://api.nytimes.com/svc/search/v2/articlesearch.json?q="climate change"&api-key={api-key}
+Način funkcionisanja New York Times API-a je moguće proučiti na sledećem linku:
+https://developer.nytimes.com/
