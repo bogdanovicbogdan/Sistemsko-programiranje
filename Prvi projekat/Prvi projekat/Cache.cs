@@ -1,254 +1,232 @@
 using System;
+using System.Text.Json;
+using DotNetEnv;
 
 namespace Prvi_projekat
 {
     public class Cache
     {
-        private static Cache? _instance = null;
         private readonly Dictionary<string, CacheStavka> _cache;
-        private static readonly object _instanceLock = new object();
-        private readonly int _ttlSekundi;
-        private readonly int _maxVelicina;
         private readonly LinkedList<string> _lruLista;
-        private readonly object _cacheLock = new object();
-        private readonly Dictionary<string, object> _keyLocks;
-        private readonly object _keyLocksLock = new object();
-        private int _hits = 0;
-        private int _misses = 0;
-        private int _evictions = 0;
-        private int _stampedeWaits = 0;
+        private static string? _apiKey;
+        private static readonly HttpClient _httpClient = new HttpClient();
 
-        public static Cache Instance
+        private readonly int _maxVelicina;
+        private readonly object _lock = new object();
+
+        private int _brojPogodaka = 0;
+        private int _brojPromasaja = 0;
+        private int _brojIzbacivanja = 0;
+        private int _stampedoCekanja = 0;
+
+        public Cache(int maxVelicina = 100)
         {
-            get
-            {
-                if (_instance == null)
-                {
-                    lock (_instanceLock)
-                    {
-                        if (_instance == null)
-                            _instance = new Cache();
-                    }
-                }
-
-                return _instance;
-            }
-        }
-
-        private Cache(int ttlSekundi = 300, int maxVelicina = 100)
-        {
-            _ttlSekundi = ttlSekundi;
             _maxVelicina = maxVelicina;
-
             _cache = new Dictionary<string, CacheStavka>();
-
             _lruLista = new LinkedList<string>();
 
-            _keyLocks = new Dictionary<string, object>();
-        }
-
-        public void Add(string key, string value)
-        {
-            lock (_cacheLock)
+            Env.Load();
+            _apiKey = Environment.GetEnvironmentVariable("API_KEY");
+            if (string.IsNullOrEmpty(_apiKey))
             {
-                if (_cache.ContainsKey(key))
-                {
-                    UkloniStavku(key);
-                }
-
-                if (_cache.Count >= _maxVelicina)
-                {
-                    UkloniLru();
-                }
-
-                LinkedListNode<string> node = new LinkedListNode<string>(key);
-
-                _lruLista.AddFirst(node);
-
-                CacheStavka stavka = new CacheStavka(value, node);
-
-                _cache[key] = stavka;
-
-                Logger.Log($"[KES] SET -> '{key}' " + $"({_cache.Count}/{_maxVelicina})");
+                Console.WriteLine("Greska prilikom ucitavanja API kljuca iz .env fajla");
+                throw new Exception("API key nije nadjen!");
             }
         }
 
-        public bool TryGetValue(string key, out string value)
+        public List<Clanak> Get(string query)
         {
-            lock (_cacheLock)
+            string kljuc = GenerisiCacheKey(query);
+
+            while (true)
             {
-                if (_cache.TryGetValue(key, out CacheStavka? stavka))
+                bool trebaFetch = false;
+
+                lock (_lock)
                 {
-                    if (stavka.JeIstekla(_ttlSekundi))
+                    if (_cache.TryGetValue(kljuc, out CacheStavka? stavka))
                     {
-                        UkloniStavku(key);
+                        if (stavka.IsLoading)
+                        {
+                            _stampedoCekanja++;
+                            Logger.Log($"Keš stampedo čekanje na ključ: {kljuc}");
 
-                        Logger.Log($"[KES] ISTEKLA -> '{key}'");
+                            Monitor.Wait(_lock);
 
-                        _misses++;
+                            continue;
+                        }
 
-                        value = null;
+                        _lruLista.Remove(stavka.LruNode);
+                        _lruLista.AddFirst(stavka.LruNode);
 
-                        return false;
+                        _brojPogodaka++;
+                        Logger.Log($"Keš pogodak za ključ: {kljuc}");
+
+                        return stavka.Clanci;
                     }
 
-                    stavka.PosledniPristup = DateTime.UtcNow;
+                    _brojPromasaja++;
+                    Logger.Log($"Keš promašaj za ključ: {kljuc}");
 
-                    _lruLista.Remove(stavka.LruNode);
+                    if (_cache.Count >= _maxVelicina && _lruLista.Last != null)
+                    {
+                        string kljucZaBrisanje = _lruLista.Last.Value;
+                        _brojIzbacivanja++;
 
-                    _lruLista.AddFirst(stavka.LruNode);
+                        if (_cache.ContainsKey(kljucZaBrisanje))
+                        {
+                            _lruLista.Remove(_cache[kljucZaBrisanje].LruNode);
+                            _cache.Remove(kljucZaBrisanje);
+                        }
 
-                    _hits++;
+                        Logger.Log($"Keš izbacivanje sa ključem: {kljucZaBrisanje}");
+                    }
 
-                    value = stavka.Vrednost;
+                    var node = new LinkedListNode<string>(kljuc);
+                    _lruLista.AddFirst(node);
+                    _cache[kljuc] = new CacheStavka(node);
 
-                    Logger.Log($"[KES] HIT -> '{key}' " + $"(preostalo: {stavka.PreostaloVreme(_ttlSekundi):F0}s)");
-
-                    return true;
+                    trebaFetch = true;
                 }
 
-                _misses++;
-
-                value = null;
-
-                Logger.Log($"[KES] MISS -> '{key}'");
-
-                return false;
-            }
-        }
-
-         public object GetKeyLock(string key)
-        {
-            lock (_keyLocksLock)
-            {
-                if (!_keyLocks.ContainsKey(key))
+                if (trebaFetch)
                 {
-                    _keyLocks[key] = new object();
-                }
-
-                return _keyLocks[key];
-            }
-        }
-
-        public string GetOrAdd(string key, Func<string> fetchFunc)
-        {
-            if (TryGetValue(key, out string? cached))
-            {
-                return cached!;
-            }
-
-            object keyLock = GetKeyLock(key);
-
-            lock (keyLock)
-            {
-                if (TryGetValue(key, out cached))
-                {
-                    _stampedeWaits++;
-
-                    Logger.Log($"[KES] STAMPEDE PREVENCIJA -> '{key}'");
-
-                    return cached!;
-                }
-
-                try
-                {
-                    Logger.Log($"[KES] API FETCH -> '{key}'");
-
-                    string rezultat = fetchFunc();
-
-                    Add(key, rezultat);
-
-                    return rezultat;
-                }
-                catch (Exception e)
-                {
-                    Logger.Log($"[KES] GRESKA API FETCH -> '{key}' : {e.Message}");
-
-                    throw;
-                }
-            }
-        }
-
-        private void UkloniStavku(string kljuc)
-        {
-            if (_cache.TryGetValue(kljuc, out CacheStavka? stavka))
-            {
-                _lruLista.Remove(stavka.LruNode);
-
-                _cache.Remove(kljuc);
-            }
-        }
-
-        private void UkloniLru()
-        {
-            if (_lruLista.Last == null)
-                return;
-
-            string lruKljuc = _lruLista.Last.Value;
-
-            UkloniStavku(lruKljuc);
-
-            _evictions++;
-
-            Logger.Log($"[KES] LRU EVICTION -> '{lruKljuc}' " + $"(ukupno: {_evictions})");
-        }
-
-        private void PokreniCleanupNit()
-        {
-            Thread cleaner = new Thread(() =>
-            {
-                while (true)
-                {
-                    Thread.Sleep(60000);
-
                     try
                     {
-                        lock (_cacheLock)
+                        Logger.Log($"API poziv za ključ: {kljuc}");
+                        List<Clanak> rezultati = FetchFromApi(kljuc);
+
+                        lock (_lock)
                         {
-                            List<string> istekli = _cache
-                                .Where(x => x.Value.JeIstekla(_ttlSekundi))
-                                .Select(x => x.Key)
-                                .ToList();
-
-                            foreach (string kljuc in istekli)
+                            if (_cache.TryGetValue(kljuc, out CacheStavka? placeholder))
                             {
-                                UkloniStavku(kljuc);
-
-                                Logger.Log($"[KES] CLEANUP -> '{kljuc}' uklonjena");
+                                placeholder.Clanci = rezultati;
+                                placeholder.IsLoading = false;
                             }
+
+                            Monitor.PulseAll(_lock);
                         }
+                        return rezultati;
                     }
                     catch (Exception e)
                     {
-                        Logger.Log($"[KES] CLEANUP GRESKA -> {e.Message}");
+                        lock (_lock)
+                        {
+                            if (_cache.ContainsKey(kljuc))
+                            {
+                                _lruLista.Remove(_cache[kljuc].LruNode);
+                                _cache.Remove(kljuc);
+                            }
+                            Monitor.PulseAll(_lock);
+                        }
+                        Logger.Log($"API Fetch greška: {e.Message}");
+                        throw;
                     }
                 }
-            });
-
-            cleaner.IsBackground = true;
-
-            cleaner.Start();
+            }
         }
 
-        public void IspisiStatistike()
+        private string GenerisiCacheKey(string query)
         {
-            lock (_cacheLock)
+            if (string.IsNullOrEmpty(query))
+                return "default";
+
+            var delovi = query.TrimStart('?').Split('&', StringSplitOptions.RemoveEmptyEntries);
+            Array.Sort(delovi);
+
+            return string.Join("&", delovi).ToLower();
+        }
+
+        private List<Clanak> FetchFromApi(string queryParametri)
+        {
+            var url = $"https://api.nytimes.com/svc/search/v2/articlesearch.json?q={queryParametri}&api-key={_apiKey}";
+
+            try
             {
-                double hitRate = (_hits + _misses) > 0 ? (double)_hits / (_hits + _misses) * 100 : 0;
+                var response = _httpClient.GetStringAsync(url);
+                var jsonString = response.GetAwaiter().GetResult();
+
+                using (var doc = JsonDocument.Parse(jsonString))
+                {
+                    if (!doc.RootElement.TryGetProperty("response", out var responseElement) || responseElement.ValueKind != JsonValueKind.Object)
+                        return new List<Clanak>();
+
+                    if (!responseElement.TryGetProperty("docs", out var docsElement) || docsElement.ValueKind != JsonValueKind.Array)
+                        return new List<Clanak>();
+
+                    var lista = new List<Clanak>();
+
+                    foreach (var item in docsElement.EnumerateArray())
+                    {
+                        if (item.ValueKind != JsonValueKind.Object)
+                            continue;
+
+                        string? naslov = null;
+                        if (item.TryGetProperty("headline", out var headline) && headline.ValueKind == JsonValueKind.Object &&
+                            headline.TryGetProperty("main", out var main) && main.ValueKind == JsonValueKind.String)
+                        {
+                            naslov = main.GetString();
+                        }
+
+                        string? abstractText = null;
+                        if (item.TryGetProperty("abstract", out var abstractProp) && abstractProp.ValueKind == JsonValueKind.String)
+                        {
+                            abstractText = abstractProp.GetString();
+                        }
+
+                        string? credit = null;
+                        if (item.TryGetProperty("byline", out var byline) && byline.ValueKind == JsonValueKind.Object &&
+                            byline.TryGetProperty("original", out var original) && original.ValueKind == JsonValueKind.String)
+                        {
+                            credit = original.GetString();
+                        }
+
+                        string? webUrl = null;
+                        if (item.TryGetProperty("web_url", out var webUrlProp) && webUrlProp.ValueKind == JsonValueKind.String)
+                        {
+                            webUrl = webUrlProp.GetString();
+                        }
+
+                        string? datumObjave = null;
+                        if (item.TryGetProperty("pub_date", out var pubDate) && pubDate.ValueKind == JsonValueKind.String)
+                        {
+                            datumObjave = pubDate.GetString();
+                        }
+
+                        if (naslov != null && abstractText != null)
+                            lista.Add(new Clanak(naslov, abstractText, credit, webUrl, datumObjave));
+                    }
+                    return lista;
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.Log($"Greška pri parsiranju API odgovora: {e.Message}");
+                return new List<Clanak>();
+            }
+        }
+
+        public string IspisiStatistiku()
+        {
+            lock (_lock)
+            {
+                double hitRate = (_brojPogodaka + _brojPromasaja) > 0 ? (double)_brojPogodaka / (_brojPogodaka + _brojPromasaja) * 100 : 0;
 
                 string stats =
                     "\n================ CACHE STATISTIKE ================\n" +
-                    $"Hits:                 {_hits}\n" +
-                    $"Misses:               {_misses}\n" +
+                    $"Hits:                 {_brojPogodaka}\n" +
+                    $"Misses:               {_brojPromasaja}\n" +
                     $"Hit rate:             {hitRate:F2}%\n" +
-                    $"LRU evictions:        {_evictions}\n" +
-                    $"Stampede prevencija:  {_stampedeWaits}\n" +
+                    $"LRU evictions:        {_brojIzbacivanja}\n" +
+                    $"Stampede prevencija:  {_stampedoCekanja}\n" +
                     $"Trenutno u kesu:      {_cache.Count}/{_maxVelicina}\n" +
                     "==================================================";
 
                 Console.WriteLine(stats);
 
                 Logger.Log(stats);
+
+                return stats;
             }
         }
     }

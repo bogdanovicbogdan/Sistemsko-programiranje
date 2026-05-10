@@ -4,27 +4,27 @@ namespace Prvi_projekat
 {
     public class CacheStavka
     {
-        public string Vrednost { get; }
-        public DateTime Kreirana { get; }
+        public List<Clanak> Clanci { get; set; }
         public DateTime PosledniPristup { get; set; }
         public LinkedListNode<string> LruNode { get; }
 
-        public CacheStavka(string vrednost, LinkedListNode<string> node)
+        public bool IsLoading { get; set; }
+        public bool IsReady => !IsLoading && Clanci != null;
+
+        public CacheStavka(LinkedListNode<string> node)
         {
-            Vrednost = vrednost;
-            Kreirana = DateTime.UtcNow;
+            Clanci = new List<Clanak>();
             PosledniPristup = DateTime.UtcNow;
             LruNode = node;
+            IsLoading = true;
         }
 
-        public bool JeIstekla(int ttlSekundi)
+        public CacheStavka(List<Clanak> clanci, LinkedListNode<string> node)
         {
-            return (DateTime.UtcNow - Kreirana).TotalSeconds > ttlSekundi;
-        }
-
-        public double PreostaloVreme(int ttlSekundi)
-        {
-            return ttlSekundi - (DateTime.UtcNow - Kreirana).TotalSeconds;
+            Clanci = clanci;
+            PosledniPristup = DateTime.UtcNow;
+            LruNode = node;
+            IsLoading = false;
         }
     }
 }
