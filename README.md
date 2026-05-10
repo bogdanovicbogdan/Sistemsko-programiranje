@@ -9,7 +9,7 @@ zadovoljavaju uslov se vraćaju kao odgovor klijentu (pretragu članaka vršiti 
 postoje, prikazati grešku klijentu.
 
 
-Primer poziva serveru: https://api.nytimes.com/svc/search/v2/articlesearch.json?q="climate change"\&api-key={api-key}
+Primer poziva serveru: https://api.nytimes.com/svc/search/v2/articlesearch.json?q="climate"\&api-key={api-key}
 
 
 Način funkcionisanja New York Times API-a je moguće proučiti na sledećem linku: https://developer.nytimes.com/
