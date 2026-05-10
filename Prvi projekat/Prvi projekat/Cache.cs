@@ -19,7 +19,7 @@ namespace Prvi_projekat
         private int _brojIzbacivanja = 0;
         private int _stampedoCekanja = 0;
 
-        public Cache(int maxVelicina = 100)
+        public Cache(int maxVelicina = 10)
         {
             _maxVelicina = maxVelicina;
             _cache = new Dictionary<string, CacheStavka>();

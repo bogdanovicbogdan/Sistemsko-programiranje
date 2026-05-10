@@ -12,7 +12,7 @@ namespace Prvi_projekat
         private bool _aktivan = false;
 
         // Parametri:
-        private static int velicinaKesa = 100;
+        private static int velicinaKesa = 10;
         public static int brojNiti = 8;
         private static RedZahteva _redZahteva = new RedZahteva();
         private static Cache _cache = new Cache(velicinaKesa);
@@ -120,7 +120,8 @@ namespace Prvi_projekat
             if (request.Url.AbsolutePath == "/stats")
             {
                 string statistika = _cache.IspisiStatistiku();
-                PosaljiOdgovor(response, 200, statistika);
+                string htmlStatistika = $"<html><body><pre>{statistika}</pre></body></html>";
+                PosaljiOdgovor(response, 200, htmlStatistika);
                 return;
             }
 
@@ -128,7 +129,7 @@ namespace Prvi_projekat
             {
                 string? query = request.QueryString["q"];
 
-                if (query == null) // Eksplicitna provera pre bilo kakvog rada sa kešom
+                if (query == null)
                 {
                     PosaljiOdgovor(response, 400, "Nedostaje query parametar 'q'.");
                     return;

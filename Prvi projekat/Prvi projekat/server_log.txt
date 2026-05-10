@@ -1,0 +1,348 @@
+[ Nit 2 ] [ 22:37:13 ] Server je isključen.
+--------------------------------------------------------------------------------
+[ Nit 4 ] [ 22:37:25 ] Server je pokrenut.
+[ Nit 5 ] [ 22:37:25 ] Nit je pokrenuta.
+[ Nit 6 ] [ 22:37:25 ] Nit je pokrenuta.
+[ Nit 7 ] [ 22:37:25 ] Nit je pokrenuta.
+[ Nit 8 ] [ 22:37:25 ] Nit je pokrenuta.
+[ Nit 9 ] [ 22:37:25 ] Nit je pokrenuta.
+[ Nit 10 ] [ 22:37:25 ] Nit je pokrenuta.
+[ Nit 11 ] [ 22:37:25 ] Nit je pokrenuta.
+[ Nit 12 ] [ 22:37:25 ] Nit je pokrenuta.
+[ Nit 5 ] [ 22:40:00 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 5 ] [ 22:40:00 ] Keš promašaj za ključ: culture
+[ Nit 5 ] [ 22:40:00 ] API poziv za ključ: culture
+[ Nit 6 ] [ 22:40:00 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 6 ] [ 22:40:00 ] Keš stampedo čekanje na ključ: culture
+[ Nit 7 ] [ 22:40:00 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 7 ] [ 22:40:00 ] Keš stampedo čekanje na ključ: culture
+[ Nit 8 ] [ 22:40:00 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 8 ] [ 22:40:00 ] Keš stampedo čekanje na ključ: culture
+[ Nit 9 ] [ 22:40:00 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 9 ] [ 22:40:00 ] Keš stampedo čekanje na ključ: culture
+[ Nit 10 ] [ 22:40:01 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 10 ] [ 22:40:01 ] Keš stampedo čekanje na ključ: culture
+[ Nit 7 ] [ 22:40:01 ] Keš pogodak za ključ: culture
+[ Nit 9 ] [ 22:40:01 ] Keš pogodak za ključ: culture
+[ Nit 10 ] [ 22:40:01 ] Keš pogodak za ključ: culture
+[ Nit 6 ] [ 22:40:01 ] Keš pogodak za ključ: culture
+[ Nit 8 ] [ 22:40:01 ] Keš pogodak za ključ: culture
+[ Nit 9 ] [ 22:40:01 ] Zahtev je obrađen.
+[ Nit 10 ] [ 22:40:01 ] Zahtev je obrađen.
+[ Nit 6 ] [ 22:40:01 ] Zahtev je obrađen.
+[ Nit 11 ] [ 22:40:01 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 11 ] [ 22:40:01 ] Keš pogodak za ključ: culture
+[ Nit 11 ] [ 22:40:01 ] Zahtev je obrađen.
+[ Nit 7 ] [ 22:40:01 ] Zahtev je obrađen.
+[ Nit 8 ] [ 22:40:01 ] Zahtev je obrađen.
+[ Nit 5 ] [ 22:40:01 ] Zahtev je obrađen.
+[ Nit 12 ] [ 22:40:01 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 12 ] [ 22:40:01 ] Keš pogodak za ključ: culture
+[ Nit 12 ] [ 22:40:01 ] Zahtev je obrađen.
+[ Nit 9 ] [ 22:40:01 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 9 ] [ 22:40:01 ] Keš pogodak za ključ: culture
+[ Nit 9 ] [ 22:40:01 ] Zahtev je obrađen.
+[ Nit 10 ] [ 22:40:01 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 10 ] [ 22:40:01 ] Keš pogodak za ključ: culture
+[ Nit 10 ] [ 22:40:01 ] Zahtev je obrađen.
+[ Nit 6 ] [ 22:40:01 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 6 ] [ 22:40:01 ] Keš pogodak za ključ: culture
+[ Nit 6 ] [ 22:40:01 ] Zahtev je obrađen.
+[ Nit 11 ] [ 22:40:02 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 11 ] [ 22:40:02 ] Keš pogodak za ključ: culture
+[ Nit 11 ] [ 22:40:02 ] Zahtev je obrađen.
+[ Nit 7 ] [ 22:40:02 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 7 ] [ 22:40:02 ] Keš pogodak za ključ: culture
+[ Nit 7 ] [ 22:40:02 ] Zahtev je obrađen.
+[ Nit 8 ] [ 22:40:02 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 8 ] [ 22:40:02 ] Keš pogodak za ključ: culture
+[ Nit 8 ] [ 22:40:02 ] Zahtev je obrađen.
+[ Nit 5 ] [ 22:40:02 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 5 ] [ 22:40:02 ] Keš pogodak za ključ: culture
+[ Nit 5 ] [ 22:40:02 ] Zahtev je obrađen.
+[ Nit 12 ] [ 22:40:02 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 12 ] [ 22:40:02 ] Keš pogodak za ključ: culture
+[ Nit 12 ] [ 22:40:02 ] Zahtev je obrađen.
+[ Nit 9 ] [ 22:40:02 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 9 ] [ 22:40:02 ] Keš pogodak za ključ: culture
+[ Nit 9 ] [ 22:40:02 ] Zahtev je obrađen.
+[ Nit 10 ] [ 22:40:02 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 10 ] [ 22:40:02 ] Keš pogodak za ključ: culture
+[ Nit 10 ] [ 22:40:02 ] Zahtev je obrađen.
+[ Nit 6 ] [ 22:40:03 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 6 ] [ 22:40:03 ] Keš pogodak za ključ: culture
+[ Nit 6 ] [ 22:40:03 ] Zahtev je obrađen.
+[ Nit 11 ] [ 22:40:03 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 11 ] [ 22:40:03 ] Keš pogodak za ključ: culture
+[ Nit 11 ] [ 22:40:03 ] Zahtev je obrađen.
+[ Nit 4 ] [ 22:41:29 ] Server je pokrenut.
+[ Nit 5 ] [ 22:41:29 ] Nit je pokrenuta.
+[ Nit 8 ] [ 22:41:29 ] Nit je pokrenuta.
+[ Nit 7 ] [ 22:41:29 ] Nit je pokrenuta.
+[ Nit 6 ] [ 22:41:29 ] Nit je pokrenuta.
+[ Nit 9 ] [ 22:41:29 ] Nit je pokrenuta.
+[ Nit 10 ] [ 22:41:29 ] Nit je pokrenuta.
+[ Nit 11 ] [ 22:41:29 ] Nit je pokrenuta.
+[ Nit 12 ] [ 22:41:29 ] Nit je pokrenuta.
+[ Nit 5 ] [ 22:41:34 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 5 ] [ 22:41:34 ] Keš promašaj za ključ: culture
+[ Nit 5 ] [ 22:41:34 ] API poziv za ključ: culture
+[ Nit 5 ] [ 22:41:35 ] Zahtev je obrađen.
+[ Nit 7 ] [ 22:41:37 ] Primljen novi zahtev: http://localhost:8080/?q=sport
+[ Nit 7 ] [ 22:41:37 ] Keš promašaj za ključ: sport
+[ Nit 7 ] [ 22:41:37 ] API poziv za ključ: sport
+[ Nit 7 ] [ 22:41:38 ] Zahtev je obrađen.
+[ Nit 9 ] [ 22:41:47 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 22:41:47 ] Keš promašaj za ključ: food
+[ Nit 9 ] [ 22:41:47 ] Keš izbacivanje sa ključem: culture
+[ Nit 9 ] [ 22:41:47 ] API poziv za ključ: food
+[ Nit 9 ] [ 22:41:48 ] Zahtev je obrađen.
+[ Nit 11 ] [ 22:43:51 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 11 ] [ 22:43:51 ] 
+================ CACHE STATISTIKE ================
+Hits:                 0
+Misses:               3
+Hit rate:             0.00%
+LRU evictions:        1
+Stampede prevencija:  0
+Trenutno u kesu:      2/2
+==================================================
+[ Nit 4 ] [ 22:44:39 ] Server je pokrenut.
+[ Nit 5 ] [ 22:44:39 ] Nit je pokrenuta.
+[ Nit 7 ] [ 22:44:39 ] Nit je pokrenuta.
+[ Nit 6 ] [ 22:44:39 ] Nit je pokrenuta.
+[ Nit 8 ] [ 22:44:39 ] Nit je pokrenuta.
+[ Nit 9 ] [ 22:44:39 ] Nit je pokrenuta.
+[ Nit 10 ] [ 22:44:39 ] Nit je pokrenuta.
+[ Nit 11 ] [ 22:44:39 ] Nit je pokrenuta.
+[ Nit 12 ] [ 22:44:39 ] Nit je pokrenuta.
+[ Nit 5 ] [ 22:44:41 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 5 ] [ 22:44:41 ] 
+================ CACHE STATISTIKE ================
+Hits:                 0
+Misses:               0
+Hit rate:             0.00%
+LRU evictions:        0
+Stampede prevencija:  0
+Trenutno u kesu:      0/2
+==================================================
+[ Nit 7 ] [ 22:44:42 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 7 ] [ 22:44:42 ] 
+================ CACHE STATISTIKE ================
+Hits:                 0
+Misses:               0
+Hit rate:             0.00%
+LRU evictions:        0
+Stampede prevencija:  0
+Trenutno u kesu:      0/2
+==================================================
+[ Nit 6 ] [ 22:44:42 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 6 ] [ 22:44:42 ] 
+================ CACHE STATISTIKE ================
+Hits:                 0
+Misses:               0
+Hit rate:             0.00%
+LRU evictions:        0
+Stampede prevencija:  0
+Trenutno u kesu:      0/2
+==================================================
+[ Nit 2 ] [ 22:47:14 ] Server je isključen.
+--------------------------------------------------------------------------------
+[ Nit 4 ] [ 22:47:19 ] Server je pokrenut.
+[ Nit 5 ] [ 22:47:19 ] Nit je pokrenuta.
+[ Nit 6 ] [ 22:47:19 ] Nit je pokrenuta.
+[ Nit 7 ] [ 22:47:19 ] Nit je pokrenuta.
+[ Nit 8 ] [ 22:47:19 ] Nit je pokrenuta.
+[ Nit 9 ] [ 22:47:19 ] Nit je pokrenuta.
+[ Nit 10 ] [ 22:47:19 ] Nit je pokrenuta.
+[ Nit 11 ] [ 22:47:19 ] Nit je pokrenuta.
+[ Nit 12 ] [ 22:47:19 ] Nit je pokrenuta.
+[ Nit 6 ] [ 22:47:31 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 6 ] [ 22:47:31 ] Keš promašaj za ključ: food
+[ Nit 6 ] [ 22:47:31 ] API poziv za ključ: food
+[ Nit 6 ] [ 22:47:32 ] Zahtev je obrađen.
+[ Nit 5 ] [ 22:47:36 ] Primljen novi zahtev: http://localhost:8080/?q=sport
+[ Nit 5 ] [ 22:47:36 ] Keš promašaj za ključ: sport
+[ Nit 5 ] [ 22:47:36 ] API poziv za ključ: sport
+[ Nit 5 ] [ 22:47:36 ] Zahtev je obrađen.
+[ Nit 9 ] [ 22:47:40 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 22:47:40 ] Keš pogodak za ključ: food
+[ Nit 9 ] [ 22:47:40 ] Zahtev je obrađen.
+[ Nit 11 ] [ 22:47:48 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 11 ] [ 22:47:48 ] Keš promašaj za ključ: culture
+[ Nit 11 ] [ 22:47:48 ] Keš izbacivanje sa ključem: sport
+[ Nit 11 ] [ 22:47:48 ] API poziv za ključ: culture
+[ Nit 11 ] [ 22:47:48 ] Zahtev je obrađen.
+[ Nit 6 ] [ 22:48:23 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 6 ] [ 22:48:23 ] Keš pogodak za ključ: culture
+[ Nit 6 ] [ 22:48:23 ] Zahtev je obrađen.
+[ Nit 7 ] [ 22:48:24 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 7 ] [ 22:48:24 ] Keš pogodak za ključ: culture
+[ Nit 7 ] [ 22:48:24 ] Zahtev je obrađen.
+[ Nit 5 ] [ 22:48:24 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 5 ] [ 22:48:24 ] Keš pogodak za ključ: culture
+[ Nit 5 ] [ 22:48:24 ] Zahtev je obrađen.
+[ Nit 8 ] [ 22:48:24 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 8 ] [ 22:48:24 ] Keš pogodak za ključ: culture
+[ Nit 8 ] [ 22:48:24 ] Zahtev je obrađen.
+[ Nit 9 ] [ 22:48:24 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 9 ] [ 22:48:24 ] Keš pogodak za ključ: culture
+[ Nit 9 ] [ 22:48:24 ] Zahtev je obrađen.
+[ Nit 10 ] [ 22:48:24 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 10 ] [ 22:48:24 ] Keš pogodak za ključ: culture
+[ Nit 10 ] [ 22:48:24 ] Zahtev je obrađen.
+[ Nit 11 ] [ 22:48:24 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 11 ] [ 22:48:24 ] Keš pogodak za ključ: culture
+[ Nit 11 ] [ 22:48:24 ] Zahtev je obrađen.
+[ Nit 12 ] [ 22:48:24 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 12 ] [ 22:48:24 ] Keš pogodak za ključ: culture
+[ Nit 12 ] [ 22:48:24 ] Zahtev je obrađen.
+[ Nit 6 ] [ 22:48:25 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 6 ] [ 22:48:25 ] Keš pogodak za ključ: culture
+[ Nit 6 ] [ 22:48:25 ] Zahtev je obrađen.
+[ Nit 7 ] [ 22:48:25 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 7 ] [ 22:48:25 ] Keš pogodak za ključ: culture
+[ Nit 7 ] [ 22:48:25 ] Zahtev je obrađen.
+[ Nit 5 ] [ 22:48:25 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 5 ] [ 22:48:25 ] Keš pogodak za ključ: culture
+[ Nit 5 ] [ 22:48:25 ] Zahtev je obrađen.
+[ Nit 8 ] [ 22:48:25 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 8 ] [ 22:48:25 ] Keš pogodak za ključ: culture
+[ Nit 8 ] [ 22:48:25 ] Zahtev je obrađen.
+[ Nit 9 ] [ 22:48:25 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 9 ] [ 22:48:25 ] Keš pogodak za ključ: culture
+[ Nit 9 ] [ 22:48:25 ] Zahtev je obrađen.
+[ Nit 10 ] [ 22:48:25 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 10 ] [ 22:48:25 ] Keš pogodak za ključ: culture
+[ Nit 10 ] [ 22:48:25 ] Zahtev je obrađen.
+[ Nit 11 ] [ 22:48:26 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 11 ] [ 22:48:26 ] Keš pogodak za ključ: culture
+[ Nit 11 ] [ 22:48:26 ] Zahtev je obrađen.
+[ Nit 12 ] [ 22:48:26 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 12 ] [ 22:48:26 ] Keš pogodak za ključ: culture
+[ Nit 12 ] [ 22:48:26 ] Zahtev je obrađen.
+[ Nit 6 ] [ 22:48:26 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 6 ] [ 22:48:26 ] Keš pogodak za ključ: culture
+[ Nit 6 ] [ 22:48:26 ] Zahtev je obrađen.
+[ Nit 7 ] [ 22:48:26 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 7 ] [ 22:48:26 ] Keš pogodak za ključ: culture
+[ Nit 7 ] [ 22:48:26 ] Zahtev je obrađen.
+[ Nit 5 ] [ 22:48:26 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 5 ] [ 22:48:26 ] Keš pogodak za ključ: culture
+[ Nit 5 ] [ 22:48:26 ] Zahtev je obrađen.
+[ Nit 8 ] [ 22:48:26 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 8 ] [ 22:48:26 ] Keš pogodak za ključ: culture
+[ Nit 8 ] [ 22:48:26 ] Zahtev je obrađen.
+[ Nit 9 ] [ 22:48:36 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 9 ] [ 22:48:36 ] Keš pogodak za ključ: culture
+[ Nit 9 ] [ 22:48:36 ] Zahtev je obrađen.
+[ Nit 11 ] [ 22:49:07 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 11 ] [ 22:49:07 ] 
+================ CACHE STATISTIKE ================
+Hits:                 22
+Misses:               3
+Hit rate:             88.00%
+LRU evictions:        1
+Stampede prevencija:  0
+Trenutno u kesu:      2/2
+==================================================
+[ Nit 12 ] [ 22:49:44 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 12 ] [ 22:49:44 ] Keš pogodak za ključ: food
+[ Nit 12 ] [ 22:49:44 ] Zahtev je obrađen.
+[ Nit 6 ] [ 22:49:46 ] Primljen novi zahtev: http://localhost:8080/?q=sport
+[ Nit 6 ] [ 22:49:46 ] Keš promašaj za ključ: sport
+[ Nit 6 ] [ 22:49:46 ] Keš izbacivanje sa ključem: culture
+[ Nit 6 ] [ 22:49:46 ] API poziv za ključ: sport
+[ Nit 6 ] [ 22:49:47 ] Zahtev je obrađen.
+[ Nit 7 ] [ 22:50:04 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 7 ] [ 22:50:04 ] Keš promašaj za ključ: culture
+[ Nit 7 ] [ 22:50:04 ] Keš izbacivanje sa ključem: food
+[ Nit 7 ] [ 22:50:04 ] API poziv za ključ: culture
+[ Nit 5 ] [ 22:50:04 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 5 ] [ 22:50:04 ] Keš stampedo čekanje na ključ: culture
+[ Nit 5 ] [ 22:50:04 ] Keš pogodak za ključ: culture
+[ Nit 7 ] [ 22:50:04 ] Zahtev je obrađen.
+[ Nit 5 ] [ 22:50:04 ] Zahtev je obrađen.
+[ Nit 8 ] [ 22:50:04 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 8 ] [ 22:50:04 ] Keš pogodak za ključ: culture
+[ Nit 8 ] [ 22:50:04 ] Zahtev je obrađen.
+[ Nit 9 ] [ 22:50:04 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 9 ] [ 22:50:04 ] Keš pogodak za ključ: culture
+[ Nit 9 ] [ 22:50:04 ] Zahtev je obrađen.
+[ Nit 10 ] [ 22:50:04 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 10 ] [ 22:50:04 ] Keš pogodak za ključ: culture
+[ Nit 10 ] [ 22:50:04 ] Zahtev je obrađen.
+[ Nit 11 ] [ 22:50:04 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 11 ] [ 22:50:04 ] Keš pogodak za ključ: culture
+[ Nit 11 ] [ 22:50:04 ] Zahtev je obrađen.
+[ Nit 12 ] [ 22:50:05 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 12 ] [ 22:50:05 ] Keš pogodak za ključ: culture
+[ Nit 12 ] [ 22:50:05 ] Zahtev je obrađen.
+[ Nit 6 ] [ 22:50:05 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 6 ] [ 22:50:05 ] Keš pogodak za ključ: culture
+[ Nit 6 ] [ 22:50:05 ] Zahtev je obrađen.
+[ Nit 7 ] [ 22:50:05 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 7 ] [ 22:50:05 ] Keš pogodak za ključ: culture
+[ Nit 7 ] [ 22:50:05 ] Zahtev je obrađen.
+[ Nit 5 ] [ 22:50:05 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 5 ] [ 22:50:05 ] Keš pogodak za ključ: culture
+[ Nit 5 ] [ 22:50:05 ] Zahtev je obrađen.
+[ Nit 8 ] [ 22:50:05 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 8 ] [ 22:50:05 ] Keš pogodak za ključ: culture
+[ Nit 8 ] [ 22:50:05 ] Zahtev je obrađen.
+[ Nit 9 ] [ 22:50:05 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 9 ] [ 22:50:05 ] Keš pogodak za ključ: culture
+[ Nit 9 ] [ 22:50:05 ] Zahtev je obrađen.
+[ Nit 10 ] [ 22:50:06 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 10 ] [ 22:50:06 ] Keš pogodak za ključ: culture
+[ Nit 10 ] [ 22:50:06 ] Zahtev je obrađen.
+[ Nit 11 ] [ 22:50:06 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 11 ] [ 22:50:06 ] Keš pogodak za ključ: culture
+[ Nit 11 ] [ 22:50:06 ] Zahtev je obrađen.
+[ Nit 12 ] [ 22:50:06 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 12 ] [ 22:50:06 ] Keš pogodak za ključ: culture
+[ Nit 12 ] [ 22:50:06 ] Zahtev je obrađen.
+[ Nit 6 ] [ 22:50:06 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 6 ] [ 22:50:06 ] Keš pogodak za ključ: culture
+[ Nit 6 ] [ 22:50:06 ] Zahtev je obrađen.
+[ Nit 7 ] [ 22:50:06 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 7 ] [ 22:50:06 ] Keš pogodak za ključ: culture
+[ Nit 7 ] [ 22:50:06 ] Zahtev je obrađen.
+[ Nit 5 ] [ 22:50:06 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 5 ] [ 22:50:06 ] Keš pogodak za ključ: culture
+[ Nit 5 ] [ 22:50:06 ] Zahtev je obrađen.
+[ Nit 8 ] [ 22:50:06 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 8 ] [ 22:50:06 ] Keš pogodak za ključ: culture
+[ Nit 8 ] [ 22:50:06 ] Zahtev je obrađen.
+[ Nit 9 ] [ 22:50:07 ] Primljen novi zahtev: http://localhost:8080/?q=culture
+[ Nit 9 ] [ 22:50:07 ] Keš pogodak za ključ: culture
+[ Nit 9 ] [ 22:50:07 ] Zahtev je obrađen.
+[ Nit 10 ] [ 22:50:20 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 10 ] [ 22:50:20 ] 
+================ CACHE STATISTIKE ================
+Hits:                 42
+Misses:               5
+Hit rate:             89.36%
+LRU evictions:        3
+Stampede prevencija:  1
+Trenutno u kesu:      2/2
+==================================================
+[ Nit 4 ] [ 22:53:42 ] Server je pokrenut.
+[ Nit 5 ] [ 22:53:42 ] Nit je pokrenuta.
+[ Nit 6 ] [ 22:53:42 ] Nit je pokrenuta.
+[ Nit 7 ] [ 22:53:42 ] Nit je pokrenuta.
+[ Nit 8 ] [ 22:53:42 ] Nit je pokrenuta.
+[ Nit 9 ] [ 22:53:42 ] Nit je pokrenuta.
+[ Nit 10 ] [ 22:53:42 ] Nit je pokrenuta.
+[ Nit 11 ] [ 22:53:42 ] Nit je pokrenuta.
+[ Nit 12 ] [ 22:53:42 ] Nit je pokrenuta.
+[ Nit 5 ] [ 22:53:46 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 5 ] [ 22:53:46 ] 
+================ CACHE STATISTIKE ================
+Hits:                 0
+Misses:               0
+Hit rate:             0.00%
+LRU evictions:        0
+Stampede prevencija:  0
+Trenutno u kesu:      0/2
+==================================================
