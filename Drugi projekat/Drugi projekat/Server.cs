@@ -11,10 +11,11 @@ namespace Drugi_projekat
         private readonly string _url = "http://localhost:8080/";
         private bool _aktivan = false;
         private static int velicinaKesa = 10;
-        private static int ttlSekunadi = 300; // 5 minuta
+        private static int ttlSekunadi = 20; // 5 minuta
         public static int brojNiti = 8;
         private static RedZahteva _redZahteva = new RedZahteva();
         private static Cache _cache = new Cache(velicinaKesa, ttlSekunadi);
+        private CancellationTokenSource _cts = new CancellationTokenSource();
 
         public static Server Instance
         {
@@ -33,41 +34,48 @@ namespace Drugi_projekat
             _listener.Prefixes.Add(_url);
         }
 
-        public void Start()
+        public async Task Start()
         {
             _aktivan = true;
-
             _listener.Start();
             Console.WriteLine($"Server je pokrenut na {_url}");
 
             Logger.Log("Server je pokrenut.");
 
+            var radnici = new Task[brojNiti];
             for (int i = 0; i < brojNiti; i++)
             {
-                Thread nit = new Thread(() =>
-                {
-                    Logger.Log("Nit je pokrenuta.");
+                int idRadnika = i;
+                radnici[i] = Task.Run(async() => {
+                    Logger.Log($"Radnik {idRadnika} pokrenut.");
 
-                    while (_aktivan)
+                    while (!_cts.Token.IsCancellationRequested)
                     {
-                        HttpListenerContext? zahtev = _redZahteva.UzmiZahtev(_aktivan);
+                        HttpListenerContext? zahtev = await _redZahteva.UzmiZahtevAsync(_cts.Token);
                         if (zahtev == null)
                             break;
 
-                        ObradiZahtev(zahtev);
+                        var sw = System.Diagnostics.Stopwatch.StartNew();
+                        await ObradiZahtev(zahtev)
+                            .ContinueWith(t =>
+                            {
+                                sw.Stop();
+                                if(t.IsFaulted)
+                                    Logger.Log($"Radnik {idRadnika}: zahtev završen sa greškom za {sw.ElapsedMilliseconds}ms");
+                                else
+                                    Logger.Log($"Radnik {idRadnika}: zahtev obrađen za {sw.ElapsedMilliseconds}ms");
+                            });
                     }
 
-                    Logger.Log("Nit se završila.");
-                });
-                nit.IsBackground = true;
-                nit.Start();
+                    Logger.Log($"Radnik {idRadnika} završen.");
+                }, _cts.Token);
             }
 
             while (_aktivan)
             {
                 try
                 {
-                    HttpListenerContext context = _listener.GetContext();
+                    HttpListenerContext context = await _listener.GetContextAsync();
                     _redZahteva.DodajZahtev(context);
                 }
                 catch (HttpListenerException e)
@@ -83,12 +91,22 @@ namespace Drugi_projekat
                         Console.WriteLine($"Greška kod servera: {e.Message}");
                 }
             }
+
+            try
+            {
+                await Task.WhenAll(radnici.Where(t => t != null));
+            }
+            catch (Exception ex)
+            {
+                Logger.Log($"Greška radnika pri gašenju: {ex.Message}");
+            }
         }
 
         public void Stop()
         {
-            _listener.Stop();
             _aktivan = false;
+            _cts.Cancel();
+            _listener.Stop();
 
             _redZahteva.PrekiniSve();
             _cache.Dispose();
@@ -97,7 +115,7 @@ namespace Drugi_projekat
             Logger.Log("Server je isključen.", true);
         }
 
-        private static void ObradiZahtev(HttpListenerContext context)
+        private static async Task ObradiZahtev(HttpListenerContext context)
         {
             var request = context.Request;
             var response = context.Response;
@@ -137,7 +155,7 @@ namespace Drugi_projekat
 
                 Console.WriteLine($"Obrada zahteva za query: {query}");
 
-                List<Clanak> clankovi = _cache.Get(query!);
+                List<Clanak> clankovi = await _cache.GetAsync(query!);
                 if (clankovi.Count == 0)
                 {
                     PosaljiOdgovor(response, 404, $"Nisu pronadjeni clanci za: {query}");
@@ -155,9 +173,13 @@ namespace Drugi_projekat
             {
                 Console.WriteLine($"Greška prilikom obrade zahteva: {e.Message}");
                 PosaljiOdgovor(response, 500, $"Greska: {e.Message}");
-            }
 
-            Logger.Log("Zahtev je obrađen.");
+                throw;
+            }
+            finally
+            {
+                Logger.Log("Zahtev je obrađen.");
+            }
         }
 
         private static void PosaljiOdgovor(HttpListenerResponse response, int statusCode, string message, string contentType = "text/html")

@@ -1,12 +1,11 @@
 using System;
 using System.Text.Json;
 using System.Collections.Concurrent;
-
 using DotNetEnv;
 
 namespace Drugi_projekat
 {
-    public class Cache
+    public class Cache : IDisposable
     {
         private readonly Dictionary<string, CacheStavka> _cache;
         private readonly LinkedList<string> _lruLista;
@@ -15,7 +14,7 @@ namespace Drugi_projekat
         private readonly int _maxVelicina;
         private readonly TimeSpan _ttl;
         private readonly object _cacheStructureLock = new object();
-        private readonly ConcurrentDictionary<string, ReaderWriterLockSlim> _keyLocks = new ConcurrentDictionary<string, ReaderWriterLockSlim>();
+        private readonly ConcurrentDictionary<string, SemaphoreSlim> _keyLocks = new();
 
         private int _brojPogodaka = 0;
         private int _brojPromasaja = 0;
@@ -26,7 +25,7 @@ namespace Drugi_projekat
         private Thread _cleanupThread;
         private bool _running = true;
 
-        public Cache(int maxVelicina = 10, int ttlSeconds = 300)
+        public Cache(int maxVelicina = 10, int ttlSeconds = 20)
         {
             _maxVelicina = maxVelicina;
             _ttl = TimeSpan.FromSeconds(ttlSeconds);
@@ -47,71 +46,73 @@ namespace Drugi_projekat
             Logger.Log("Keš cleanup nit je pokrenuta.");
         }
 
-        public List<Clanak> Get(string query)
+        public async Task<List<Clanak>> GetAsync(string query)
         {
             string kljuc = GenerisiCacheKey(query);
-            ReaderWriterLockSlim keyLock = GetOrCreateKeyLock(kljuc);
 
-            keyLock.EnterReadLock();
-            try
+            lock (_cacheStructureLock)
             {
                 if (_cache.TryGetValue(kljuc, out CacheStavka? stavka) && !stavka.IsExpired)
                 {
-                    lock (_cacheStructureLock)
-                    {
-                        _lruLista.Remove(stavka.LruNode);
-                        _lruLista.AddFirst(stavka.LruNode);
-
-                        _brojPogodaka++;
-                    }
-
+                    _lruLista.Remove(stavka.LruNode);
+                    _lruLista.AddFirst(stavka.LruNode);
+                    _brojPogodaka++;
                     Logger.Log($"Keš pogodak za ključ: {kljuc}");
                     return stavka.Clanci;
                 }
             }
-            finally
-            {
-                keyLock.ExitReadLock();
-            }
 
-            bool cekanje = false;
-            if (!keyLock.TryEnterWriteLock(0))
-            {
-                cekanje = true;
-                //Console.WriteLine("cekam stampedo");
-                keyLock.EnterWriteLock();
-            }
+            SemaphoreSlim keyLock = _keyLocks.GetOrAdd(kljuc, _ => new SemaphoreSlim(1, 1));
+
+            await keyLock.WaitAsync();
             try
             {
-                if (_cache.TryGetValue(kljuc, out CacheStavka? stavka) && !stavka.IsExpired)
+                lock(_cacheStructureLock)
                 {
-                    if (cekanje)
+                    if(_cache.TryGetValue(kljuc, out CacheStavka? stavka) && !stavka.IsExpired)
                     {
-                        lock (_cacheStructureLock)
-                        {
-                            _stampedoCekanja++;
-                        }
-
-                        Logger.Log($"Keš stampedo sprečen za ključ: {kljuc} (podaci pokupnjeni od prethodne niti)");
+                        _stampedoCekanja++;
+                        Logger.Log($"Keš stampedo sprečen za ključ: {kljuc}");
+                        return stavka.Clanci;
                     }
-                    return stavka.Clanci;
                 }
 
-                Logger.Log($"Keš promašaj za ključ: {kljuc}. Pokrećem API poziv...");
+                Logger.Log($"Keš promašaj za ključ: {kljuc}. Pokrećem async API poziv...");
 
-                List<Clanak> rezultati = FetchFromApi(kljuc);
+                List<Clanak> rezultati = await FetchFromApiAsync(kljuc)
+                    .ContinueWith(apiTask =>
+                    {
+                        if(apiTask.IsFaulted)
+                        {
+                            Logger.Log($"API poziv nije uspeo za ključ {kljuc}: {apiTask.Exception?.InnerException?.Message}");
+                            throw apiTask.Exception!.InnerException ?? new Exception("Nepoznata greška pri API pozivu.");
+                        }
+                        Logger.Log($"API poziv uspešno završen za ključ: {kljuc}, " +
+                                   $"dobijeno {apiTask.Result.Count} članaka.");
+                        return apiTask.Result;
 
-                lock (_cacheStructureLock)
+                    }, TaskContinuationOptions.ExecuteSynchronously);
+
+                lock(_cacheStructureLock)
                 {
                     _brojPromasaja++;
-                    if (_cache.Count >= _maxVelicina && _lruLista.Last != null)
+
+                    if (_cache.TryGetValue(kljuc, out var staraStavka))
+                    {
+                        _lruLista.Remove(staraStavka.LruNode);
+                        _cache.Remove(kljuc);
+                    }
+
+                    if(_cache.Count >= _maxVelicina && _lruLista.Last != null)
                     {
                         string kljucZaBrisanje = _lruLista.Last.Value;
-                        if (_cache.Remove(kljucZaBrisanje, out var stariNode))
+                        if(_cache.Remove(kljucZaBrisanje, out var stariNode))
                         {
                             _lruLista.Remove(stariNode.LruNode);
                             _brojIzbacivanja++;
-                            Logger.Log($"Keš izbacivanje (LRU) sa ključem: {kljucZaBrisanje}");
+                            Logger.Log($"Keš izbacivanje (LRU): {kljucZaBrisanje}");
+
+                            _keyLocks.TryRemove(kljucZaBrisanje, out _);
                         }
                     }
 
@@ -122,20 +123,15 @@ namespace Drugi_projekat
 
                 return rezultati;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
-                Logger.Log($"API Fetch ili upis greška za ključ {kljuc}: {e.Message}");
+                Logger.Log($"Greška pri obradi ključa {kljuc}: {e.Message}");
                 throw;
             }
             finally
             {
-                keyLock.ExitWriteLock();
+                keyLock.Release();
             }
-        }
-
-        private ReaderWriterLockSlim GetOrCreateKeyLock(string key)
-        {
-            return _keyLocks.GetOrAdd(key, _ => new ReaderWriterLockSlim());
         }
 
         private string GenerisiCacheKey(string query)
@@ -149,14 +145,16 @@ namespace Drugi_projekat
             return string.Join("&", delovi).ToLower();
         }
 
-        private List<Clanak> FetchFromApi(string queryParametri)
+        private async Task<List<Clanak>> FetchFromApiAsync(string queryParametri)
         {
-            var url = $"https://api.nytimes.com/svc/search/v2/articlesearch.json?q={queryParametri}&api-key={_apiKey}";
+            var encoded = Uri.EscapeDataString(queryParametri);
+            var url = $"https://api.nytimes.com/svc/search/v2/articlesearch.json?q={encoded}&api-key={_apiKey}";
 
             try
             {
-                var response = _httpClient.GetStringAsync(url);
-                var jsonString = response.GetAwaiter().GetResult();
+                await Task.Delay(5000);
+
+                string jsonString = await _httpClient.GetStringAsync(url);
 
                 using (var doc = JsonDocument.Parse(jsonString))
                 {
@@ -214,7 +212,7 @@ namespace Drugi_projekat
             catch (Exception e)
             {
                 Logger.Log($"Greška pri parsiranju API odgovora: {e.Message}");
-                return new List<Clanak>();
+                throw;
             }
         }
 
@@ -226,17 +224,17 @@ namespace Drugi_projekat
                 {
                     Thread.Sleep(10000);
 
-                    var keysToRemove = new List<string>();
-
-                    foreach (var kvp in _cache)
+                    lock(_cacheStructureLock)
                     {
-                        if (kvp.Value.IsExpired)
-                            keysToRemove.Add(kvp.Key);
-                    }
+                        var keysToRemove = new List<string>();
 
-                    foreach (var key in keysToRemove)
-                    {
-                        lock (_cacheStructureLock)
+                        foreach (var kvp in _cache)
+                        {
+                            if (kvp.Value.IsExpired)
+                                keysToRemove.Add(kvp.Key);
+                        }
+
+                        foreach (var key in keysToRemove)
                         {
                             if (_cache.ContainsKey(key))
                             {
@@ -244,8 +242,9 @@ namespace Drugi_projekat
                                 _cache.Remove(key);
                                 _brojCleanupIzbacivanja++;
                             }
-                        }
 
+                            _keyLocks.TryRemove(key, out _);
+                        }
                     }
                 }
                 catch (ThreadInterruptedException)

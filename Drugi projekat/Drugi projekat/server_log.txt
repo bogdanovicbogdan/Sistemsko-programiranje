@@ -1,0 +1,724 @@
+[ Nit 2 ] [ 23:16:18 ] Keš cleanup nit je pokrenuta.
+[ Nit 5 ] [ 23:16:18 ] Server je pokrenut.
+[ Nit 8 ] [ 23:16:18 ] Radnik 0 pokrenut.
+[ Nit 10 ] [ 23:16:18 ] Radnik 2 pokrenut.
+[ Nit 14 ] [ 23:16:18 ] Radnik 6 pokrenut.
+[ Nit 11 ] [ 23:16:18 ] Radnik 3 pokrenut.
+[ Nit 12 ] [ 23:16:18 ] Radnik 4 pokrenut.
+[ Nit 13 ] [ 23:16:18 ] Radnik 5 pokrenut.
+[ Nit 9 ] [ 23:16:18 ] Radnik 1 pokrenut.
+[ Nit 15 ] [ 23:16:18 ] Radnik 7 pokrenut.
+[ Nit 10 ] [ 23:16:31 ] Primljen novi zahtev: http://localhost:8080/
+[ Nit 11 ] [ 23:16:31 ] Radnik 0: zahtev obrađen za 25ms
+[ Nit 15 ] [ 23:16:31 ] Radnik 6: zahtev obrađen za 2ms
+[ Nit 3 ] [ 23:17:34 ] Primljen novi zahtev: http://localhost:8080/?q=climate
+[ Nit 3 ] [ 23:17:34 ] Keš promašaj za ključ: climate. Pokrećem async API poziv...
+[ Nit 17 ] [ 23:17:35 ] API poziv uspešno završen za ključ: climate, dobijeno 10 članaka.
+[ Nit 17 ] [ 23:17:35 ] Zahtev je obrađen.
+[ Nit 3 ] [ 23:17:35 ] Radnik 2: zahtev obrađen za 882ms
+[ Nit 17 ] [ 23:17:56 ] Primljen novi zahtev: http://localhost:8080/?q=footbal
+[ Nit 17 ] [ 23:17:56 ] Keš promašaj za ključ: footbal. Pokrećem async API poziv...
+[ Nit 17 ] [ 23:17:57 ] API poziv uspešno završen za ključ: footbal, dobijeno 10 članaka.
+[ Nit 17 ] [ 23:17:57 ] Zahtev je obrađen.
+[ Nit 17 ] [ 23:17:57 ] Radnik 3: zahtev obrađen za 498ms
+[ Nit 17 ] [ 23:18:02 ] Primljen novi zahtev: http://localhost:8080/?q=foodhcds
+[ Nit 17 ] [ 23:18:02 ] Keš promašaj za ključ: foodhcds. Pokrećem async API poziv...
+[ Nit 17 ] [ 23:18:02 ] API poziv uspešno završen za ključ: foodhcds, dobijeno 0 članaka.
+[ Nit 17 ] [ 23:18:02 ] Radnik 4: zahtev obrađen za 550ms
+[ Nit 3 ] [ 23:19:25 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 3 ] [ 23:19:25 ] Keš promašaj za ključ: food. Pokrećem async API poziv...
+[ Nit 17 ] [ 23:19:25 ] API poziv uspešno završen za ključ: food, dobijeno 10 članaka.
+[ Nit 17 ] [ 23:19:25 ] Zahtev je obrađen.
+[ Nit 17 ] [ 23:19:25 ] Radnik 5: zahtev obrađen za 680ms
+[ Nit 17 ] [ 23:19:58 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 17 ] [ 23:19:58 ] Keš pogodak za ključ: food
+[ Nit 17 ] [ 23:19:58 ] Zahtev je obrađen.
+[ Nit 17 ] [ 23:19:58 ] Radnik 1: zahtev obrađen za 29ms
+[ Nit 2 ] [ 12:02:05 ] Keš cleanup nit je pokrenuta.
+[ Nit 5 ] [ 12:02:05 ] Server je pokrenut.
+[ Nit 8 ] [ 12:02:05 ] Radnik 0 pokrenut.
+[ Nit 10 ] [ 12:02:05 ] Radnik 2 pokrenut.
+[ Nit 9 ] [ 12:02:05 ] Radnik 1 pokrenut.
+[ Nit 11 ] [ 12:02:05 ] Radnik 3 pokrenut.
+[ Nit 12 ] [ 12:02:05 ] Radnik 4 pokrenut.
+[ Nit 13 ] [ 12:02:05 ] Radnik 5 pokrenut.
+[ Nit 14 ] [ 12:02:05 ] Radnik 6 pokrenut.
+[ Nit 16 ] [ 12:02:05 ] Radnik 7 pokrenut.
+[ Nit 19 ] [ 12:03:31 ] Primljen novi zahtev: http://localhost:8080/?q=artificial+intelligence
+[ Nit 19 ] [ 12:03:31 ] Keš promašaj za ključ: artificial intelligence. Pokrećem async API poziv...
+[ Nit 20 ] [ 12:03:32 ] API poziv uspešno završen za ključ: artificial intelligence, dobijeno 10 članaka.
+[ Nit 20 ] [ 12:03:32 ] Zahtev je obrađen.
+[ Nit 19 ] [ 12:03:32 ] Radnik 0: zahtev obrađen za 1181ms
+[ Nit 19 ] [ 12:03:32 ] Radnik 1: zahtev obrađen za 0ms
+[ Nit 20 ] [ 12:04:00 ] Primljen novi zahtev: http://localhost:8080/?q=artificial+intelligence
+[ Nit 20 ] [ 12:04:00 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 20 ] [ 12:04:00 ] Zahtev je obrađen.
+[ Nit 20 ] [ 12:04:00 ] Radnik 3: zahtev obrađen za 7ms
+[ Nit 24 ] [ 12:04:20 ] Primljen novi zahtev: http://localhost:8080/?q=artificial+intelligence
+[ Nit 24 ] [ 12:04:20 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 24 ] [ 12:04:20 ] Zahtev je obrađen.
+[ Nit 24 ] [ 12:04:20 ] Radnik 2: zahtev obrađen za 6ms
+[ Nit 20 ] [ 12:04:31 ] Primljen novi zahtev: http://localhost:8080/?q=football
+[ Nit 20 ] [ 12:04:31 ] Keš promašaj za ključ: football. Pokrećem async API poziv...
+[ Nit 26 ] [ 12:04:31 ] API poziv uspešno završen za ključ: football, dobijeno 10 članaka.
+[ Nit 26 ] [ 12:04:32 ] Zahtev je obrađen.
+[ Nit 25 ] [ 12:04:32 ] Radnik 4: zahtev obrađen za 488ms
+[ Nit 26 ] [ 12:04:45 ] Primljen novi zahtev: http://localhost:8080/?q=climate
+[ Nit 26 ] [ 12:04:45 ] Keš promašaj za ključ: climate. Pokrećem async API poziv...
+[ Nit 26 ] [ 12:04:45 ] API poziv uspešno završen za ključ: climate, dobijeno 10 članaka.
+[ Nit 26 ] [ 12:04:45 ] Zahtev je obrađen.
+[ Nit 26 ] [ 12:04:45 ] Radnik 5: zahtev obrađen za 451ms
+[ Nit 25 ] [ 12:05:09 ] Primljen novi zahtev: http://localhost:8080/?q=artificial+intelligence
+[ Nit 25 ] [ 12:05:09 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 25 ] [ 12:05:09 ] Zahtev je obrađen.
+[ Nit 25 ] [ 12:05:09 ] Radnik 6: zahtev obrađen za 6ms
+[ Nit 27 ] [ 12:05:29 ] Primljen novi zahtev: http://localhost:8080/?q=football
+[ Nit 27 ] [ 12:05:29 ] Keš pogodak za ključ: football
+[ Nit 27 ] [ 12:05:29 ] Zahtev je obrađen.
+[ Nit 27 ] [ 12:05:29 ] Radnik 7: zahtev obrađen za 7ms
+[ Nit 27 ] [ 12:05:38 ] Primljen novi zahtev: http://localhost:8080/?q=climate
+[ Nit 27 ] [ 12:05:38 ] Keš pogodak za ključ: climate
+[ Nit 27 ] [ 12:05:38 ] Zahtev je obrađen.
+[ Nit 27 ] [ 12:05:38 ] Radnik 0: zahtev obrađen za 3ms
+[ Nit 27 ] [ 12:06:02 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 27 ] [ 12:06:02 ] Keš promašaj za ključ: food. Pokrećem async API poziv...
+[ Nit 25 ] [ 12:06:02 ] API poziv uspešno završen za ključ: food, dobijeno 10 članaka.
+[ Nit 25 ] [ 12:06:03 ] Zahtev je obrađen.
+[ Nit 25 ] [ 12:06:03 ] Radnik 1: zahtev obrađen za 610ms
+[ Nit 25 ] [ 12:06:11 ] Primljen novi zahtev: http://localhost:8080/?q=artificial+intelligence
+[ Nit 25 ] [ 12:06:11 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 25 ] [ 12:06:11 ] Zahtev je obrađen.
+[ Nit 25 ] [ 12:06:11 ] Radnik 3: zahtev obrađen za 3ms
+[ Nit 25 ] [ 12:07:09 ] Primljen novi zahtev: http://localhost:8080/?q=artificial+intelligence
+[ Nit 25 ] [ 12:07:09 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 25 ] [ 12:07:09 ] Zahtev je obrađen.
+[ Nit 25 ] [ 12:07:09 ] Radnik 2: zahtev obrađen za 6ms
+[ Nit 25 ] [ 12:07:23 ] Radnik 2 završen.
+[ Nit 28 ] [ 12:07:23 ] Radnik 1 završen.
+[ Nit 27 ] [ 12:07:23 ] Radnik 3 završen.
+[ Nit 25 ] [ 12:07:23 ] Radnik 0 završen.
+[ Nit 30 ] [ 12:07:23 ] Radnik 6 završen.
+[ Nit 31 ] [ 12:07:23 ] Radnik 7 završen.
+[ Nit 28 ] [ 12:07:23 ] Radnik 4 završen.
+[ Nit 32 ] [ 12:07:23 ] Radnik 5 završen.
+[ Nit 7 ] [ 12:07:23 ] Server je isključen.
+--------------------------------------------------------------------------------
+[ Nit 2 ] [ 12:07:46 ] Keš cleanup nit je pokrenuta.
+[ Nit 5 ] [ 12:07:46 ] Server je pokrenut.
+[ Nit 8 ] [ 12:07:46 ] Radnik 0 pokrenut.
+[ Nit 9 ] [ 12:07:46 ] Radnik 1 pokrenut.
+[ Nit 10 ] [ 12:07:46 ] Radnik 2 pokrenut.
+[ Nit 11 ] [ 12:07:46 ] Radnik 3 pokrenut.
+[ Nit 12 ] [ 12:07:46 ] Radnik 4 pokrenut.
+[ Nit 14 ] [ 12:07:46 ] Radnik 5 pokrenut.
+[ Nit 15 ] [ 12:07:46 ] Radnik 6 pokrenut.
+[ Nit 16 ] [ 12:07:46 ] Radnik 7 pokrenut.
+[ Nit 15 ] [ 12:07:55 ] Primljen novi zahtev: http://localhost:8080/?q=artificial+intelligence
+[ Nit 15 ] [ 12:07:55 ] Keš promašaj za ključ: artificial intelligence. Pokrećem async API poziv...
+[ Nit 16 ] [ 12:07:56 ] API poziv uspešno završen za ključ: artificial intelligence, dobijeno 10 članaka.
+[ Nit 16 ] [ 12:07:56 ] Zahtev je obrađen.
+[ Nit 16 ] [ 12:07:56 ] Radnik 0: zahtev obrađen za 869ms
+[ Nit 15 ] [ 12:08:11 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 15 ] [ 12:08:11 ] Keš promašaj za ključ: food. Pokrećem async API poziv...
+[ Nit 10 ] [ 12:08:11 ] API poziv uspešno završen za ključ: food, dobijeno 10 članaka.
+[ Nit 10 ] [ 12:08:11 ] Zahtev je obrađen.
+[ Nit 15 ] [ 12:08:11 ] Radnik 1: zahtev obrađen za 268ms
+[ Nit 15 ] [ 12:08:15 ] Primljen novi zahtev: http://localhost:8080/?q=climate
+[ Nit 15 ] [ 12:08:15 ] Keš promašaj za ključ: climate. Pokrećem async API poziv...
+[ Nit 15 ] [ 12:08:15 ] API poziv uspešno završen za ključ: climate, dobijeno 10 članaka.
+[ Nit 15 ] [ 12:08:15 ] Zahtev je obrađen.
+[ Nit 15 ] [ 12:08:15 ] Radnik 2: zahtev obrađen za 252ms
+[ Nit 16 ] [ 12:08:21 ] Primljen novi zahtev: http://localhost:8080/?q=football
+[ Nit 16 ] [ 12:08:21 ] Keš promašaj za ključ: football. Pokrećem async API poziv...
+[ Nit 16 ] [ 12:08:21 ] API poziv uspešno završen za ključ: football, dobijeno 10 članaka.
+[ Nit 16 ] [ 12:08:21 ] Zahtev je obrađen.
+[ Nit 16 ] [ 12:08:21 ] Radnik 3: zahtev obrađen za 212ms
+[ Nit 10 ] [ 12:08:25 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 10 ] [ 12:08:25 ] Keš promašaj za ključ: food. Pokrećem async API poziv...
+[ Nit 10 ] [ 12:08:25 ] API poziv uspešno završen za ključ: food, dobijeno 10 članaka.
+[ Nit 10 ] [ 12:08:25 ] Zahtev je obrađen.
+[ Nit 10 ] [ 12:08:25 ] Radnik 4: zahtev obrađen za 202ms
+[ Nit 10 ] [ 12:08:41 ] Radnik 4 završen.
+[ Nit 16 ] [ 12:08:41 ] Radnik 3 završen.
+[ Nit 10 ] [ 12:08:41 ] Radnik 2 završen.
+[ Nit 16 ] [ 12:08:41 ] Radnik 1 završen.
+[ Nit 22 ] [ 12:08:41 ] Radnik 0 završen.
+[ Nit 10 ] [ 12:08:41 ] Radnik 7 završen.
+[ Nit 23 ] [ 12:08:41 ] Radnik 6 završen.
+[ Nit 24 ] [ 12:08:41 ] Radnik 5 završen.
+[ Nit 7 ] [ 12:08:41 ] Server je isključen.
+--------------------------------------------------------------------------------
+[ Nit 2 ] [ 12:09:45 ] Keš cleanup nit je pokrenuta.
+[ Nit 5 ] [ 12:09:45 ] Server je pokrenut.
+[ Nit 8 ] [ 12:09:45 ] Radnik 0 pokrenut.
+[ Nit 9 ] [ 12:09:45 ] Radnik 1 pokrenut.
+[ Nit 10 ] [ 12:09:45 ] Radnik 2 pokrenut.
+[ Nit 11 ] [ 12:09:45 ] Radnik 3 pokrenut.
+[ Nit 12 ] [ 12:09:45 ] Radnik 4 pokrenut.
+[ Nit 13 ] [ 12:09:45 ] Radnik 5 pokrenut.
+[ Nit 14 ] [ 12:09:45 ] Radnik 6 pokrenut.
+[ Nit 16 ] [ 12:09:45 ] Radnik 7 pokrenut.
+[ Nit 12 ] [ 12:09:52 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 12 ] [ 12:09:52 ] Keš promašaj za ključ: food. Pokrećem async API poziv...
+[ Nit 12 ] [ 12:09:52 ] API poziv uspešno završen za ključ: food, dobijeno 10 članaka.
+[ Nit 12 ] [ 12:09:52 ] Zahtev je obrađen.
+[ Nit 16 ] [ 12:09:52 ] Radnik 1: zahtev obrađen za 753ms
+[ Nit 16 ] [ 12:09:58 ] Primljen novi zahtev: http://localhost:8080/?q=artificial+intelligence
+[ Nit 16 ] [ 12:09:58 ] Keš promašaj za ključ: artificial intelligence. Pokrećem async API poziv...
+[ Nit 16 ] [ 12:09:59 ] API poziv uspešno završen za ključ: artificial intelligence, dobijeno 10 članaka.
+[ Nit 16 ] [ 12:09:59 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:09:59 ] Radnik 2: zahtev obrađen za 448ms
+[ Nit 12 ] [ 12:10:06 ] Primljen novi zahtev: http://localhost:8080/?q=artificial+intelligence
+[ Nit 12 ] [ 12:10:06 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 12 ] [ 12:10:06 ] Zahtev je obrađen.
+[ Nit 12 ] [ 12:10:06 ] Radnik 3: zahtev obrađen za 8ms
+[ Nit 9 ] [ 12:10:11 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 12:10:11 ] Keš pogodak za ključ: food
+[ Nit 9 ] [ 12:10:11 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:10:11 ] Radnik 0: zahtev obrađen za 4ms
+[ Nit 21 ] [ 12:11:26 ] Primljen novi zahtev: http://localhost:8080/?q=artificial+intelligence
+[ Nit 21 ] [ 12:11:26 ] Keš promašaj za ključ: artificial intelligence. Pokrećem async API poziv...
+[ Nit 21 ] [ 12:11:27 ] API poziv uspešno završen za ključ: artificial intelligence, dobijeno 10 članaka.
+[ Nit 21 ] [ 12:11:27 ] Zahtev je obrađen.
+[ Nit 21 ] [ 12:11:27 ] Radnik 4: zahtev obrađen za 381ms
+[ Nit 12 ] [ 12:11:30 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 12 ] [ 12:11:30 ] Keš promašaj za ključ: food. Pokrećem async API poziv...
+[ Nit 21 ] [ 12:11:31 ] API poziv uspešno završen za ključ: food, dobijeno 10 članaka.
+[ Nit 21 ] [ 12:11:31 ] Zahtev je obrađen.
+[ Nit 21 ] [ 12:11:31 ] Radnik 5: zahtev obrađen za 449ms
+[ Nit 12 ] [ 12:12:11 ] Primljen novi zahtev: http://localhost:8080/?q=bitcoin
+[ Nit 12 ] [ 12:12:11 ] Keš promašaj za ključ: bitcoin. Pokrećem async API poziv...
+[ Nit 12 ] [ 12:12:12 ] API poziv uspešno završen za ključ: bitcoin, dobijeno 10 članaka.
+[ Nit 12 ] [ 12:12:12 ] Zahtev je obrađen.
+[ Nit 12 ] [ 12:12:12 ] Radnik 6: zahtev obrađen za 455ms
+[ Nit 23 ] [ 12:12:24 ] Primljen novi zahtev: http://localhost:8080/?q=sea
+[ Nit 23 ] [ 12:12:24 ] Keš promašaj za ključ: sea. Pokrećem async API poziv...
+[ Nit 23 ] [ 12:12:25 ] API poziv uspešno završen za ključ: sea, dobijeno 10 članaka.
+[ Nit 23 ] [ 12:12:25 ] Zahtev je obrađen.
+[ Nit 23 ] [ 12:12:25 ] Radnik 7: zahtev obrađen za 434ms
+[ Nit 12 ] [ 12:12:34 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 12 ] [ 12:12:34 ] Keš promašaj za ključ: basket. Pokrećem async API poziv...
+[ Nit 23 ] [ 12:12:35 ] API poziv uspešno završen za ključ: basket, dobijeno 10 članaka.
+[ Nit 23 ] [ 12:12:35 ] Zahtev je obrađen.
+[ Nit 23 ] [ 12:12:35 ] Radnik 1: zahtev obrađen za 460ms
+[ Nit 12 ] [ 12:12:40 ] Primljen novi zahtev: http://localhost:8080/?q=school
+[ Nit 12 ] [ 12:12:40 ] Keš promašaj za ključ: school. Pokrećem async API poziv...
+[ Nit 23 ] [ 12:12:40 ] API poziv uspešno završen za ključ: school, dobijeno 10 članaka.
+[ Nit 23 ] [ 12:12:40 ] Zahtev je obrađen.
+[ Nit 23 ] [ 12:12:40 ] Radnik 2: zahtev obrađen za 491ms
+[ Nit 12 ] [ 12:12:48 ] Primljen novi zahtev: http://localhost:8080/?q=city
+[ Nit 12 ] [ 12:12:48 ] Keš promašaj za ključ: city. Pokrećem async API poziv...
+[ Nit 23 ] [ 12:12:48 ] API poziv uspešno završen za ključ: city, dobijeno 10 članaka.
+[ Nit 23 ] [ 12:12:48 ] Zahtev je obrađen.
+[ Nit 23 ] [ 12:12:48 ] Radnik 3: zahtev obrađen za 505ms
+[ Nit 12 ] [ 12:12:55 ] Primljen novi zahtev: http://localhost:8080/?q=town
+[ Nit 12 ] [ 12:12:55 ] Keš promašaj za ključ: town. Pokrećem async API poziv...
+[ Nit 12 ] [ 12:12:55 ] Greška pri parsiranju API odgovora: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 12 ] [ 12:12:55 ] API poziv nije uspeo za ključ town: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 12 ] [ 12:12:55 ] Greška pri obradi ključa town: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 12 ] [ 12:12:55 ] Zahtev je obrađen.
+[ Nit 12 ] [ 12:12:55 ] Radnik 0: zahtev završen sa greškom za 178ms
+[ Nit 12 ] [ 12:13:06 ] Primljen novi zahtev: http://localhost:8080/?q=nevada
+[ Nit 12 ] [ 12:13:06 ] Keš promašaj za ključ: nevada. Pokrećem async API poziv...
+[ Nit 12 ] [ 12:13:07 ] API poziv uspešno završen za ključ: nevada, dobijeno 10 članaka.
+[ Nit 12 ] [ 12:13:07 ] Zahtev je obrađen.
+[ Nit 12 ] [ 12:13:07 ] Radnik 4: zahtev obrađen za 412ms
+[ Nit 21 ] [ 12:13:13 ] Primljen novi zahtev: http://localhost:8080/?q=nebraska
+[ Nit 21 ] [ 12:13:13 ] Keš promašaj za ključ: nebraska. Pokrećem async API poziv...
+[ Nit 23 ] [ 12:13:13 ] API poziv uspešno završen za ključ: nebraska, dobijeno 10 članaka.
+[ Nit 23 ] [ 12:13:13 ] Zahtev je obrađen.
+[ Nit 23 ] [ 12:13:13 ] Radnik 5: zahtev obrađen za 468ms
+[ Nit 23 ] [ 12:14:03 ] Primljen novi zahtev: http://localhost:8080/?q=drink
+[ Nit 23 ] [ 12:14:03 ] Keš promašaj za ključ: drink. Pokrećem async API poziv...
+[ Nit 23 ] [ 12:14:04 ] API poziv uspešno završen za ključ: drink, dobijeno 10 članaka.
+[ Nit 23 ] [ 12:14:04 ] Zahtev je obrađen.
+[ Nit 23 ] [ 12:14:04 ] Radnik 6: zahtev obrađen za 436ms
+[ Nit 3 ] [ 12:14:08 ] Primljen novi zahtev: http://localhost:8080/?q=coffe
+[ Nit 3 ] [ 12:14:08 ] Keš promašaj za ključ: coffe. Pokrećem async API poziv...
+[ Nit 3 ] [ 12:14:09 ] API poziv uspešno završen za ključ: coffe, dobijeno 10 članaka.
+[ Nit 3 ] [ 12:14:09 ] Zahtev je obrađen.
+[ Nit 3 ] [ 12:14:09 ] Radnik 7: zahtev obrađen za 423ms
+[ Nit 3 ] [ 12:14:59 ] Primljen novi zahtev: http://localhost:8080/?q=china
+[ Nit 3 ] [ 12:14:59 ] Keš promašaj za ključ: china. Pokrećem async API poziv...
+[ Nit 22 ] [ 12:15:00 ] API poziv uspešno završen za ključ: china, dobijeno 10 članaka.
+[ Nit 22 ] [ 12:15:00 ] Zahtev je obrađen.
+[ Nit 22 ] [ 12:15:00 ] Radnik 1: zahtev obrađen za 460ms
+[ Nit 3 ] [ 12:15:26 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 3 ] [ 12:15:26 ] Keš promašaj za ključ: food. Pokrećem async API poziv...
+[ Nit 20 ] [ 12:15:27 ] API poziv uspešno završen za ključ: food, dobijeno 10 članaka.
+[ Nit 20 ] [ 12:15:27 ] Zahtev je obrađen.
+[ Nit 20 ] [ 12:15:27 ] Radnik 2: zahtev obrađen za 209ms
+[ Nit 3 ] [ 12:15:28 ] Primljen novi zahtev: http://localhost:8080/?q=artificial+intelligence
+[ Nit 3 ] [ 12:15:28 ] Keš promašaj za ključ: artificial intelligence. Pokrećem async API poziv...
+[ Nit 20 ] [ 12:15:29 ] API poziv uspešno završen za ključ: artificial intelligence, dobijeno 10 članaka.
+[ Nit 20 ] [ 12:15:29 ] Zahtev je obrađen.
+[ Nit 20 ] [ 12:15:29 ] Radnik 3: zahtev obrađen za 468ms
+[ Nit 3 ] [ 12:15:31 ] Primljen novi zahtev: http://localhost:8080/?q=bitcoin
+[ Nit 3 ] [ 12:15:31 ] Keš promašaj za ključ: bitcoin. Pokrećem async API poziv...
+[ Nit 22 ] [ 12:15:31 ] API poziv uspešno završen za ključ: bitcoin, dobijeno 10 članaka.
+[ Nit 22 ] [ 12:15:31 ] Zahtev je obrađen.
+[ Nit 22 ] [ 12:15:31 ] Radnik 0: zahtev obrađen za 229ms
+[ Nit 3 ] [ 12:15:33 ] Primljen novi zahtev: http://localhost:8080/?q=sea
+[ Nit 3 ] [ 12:15:33 ] Keš promašaj za ključ: sea. Pokrećem async API poziv...
+[ Nit 3 ] [ 12:15:33 ] API poziv uspešno završen za ključ: sea, dobijeno 10 članaka.
+[ Nit 3 ] [ 12:15:33 ] Zahtev je obrađen.
+[ Nit 3 ] [ 12:15:33 ] Radnik 4: zahtev obrađen za 209ms
+[ Nit 20 ] [ 12:15:35 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 20 ] [ 12:15:35 ] Keš promašaj za ključ: basket. Pokrećem async API poziv...
+[ Nit 20 ] [ 12:15:35 ] Greška pri parsiranju API odgovora: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 20 ] [ 12:15:35 ] API poziv nije uspeo za ključ basket: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 20 ] [ 12:15:35 ] Greška pri obradi ključa basket: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 20 ] [ 12:15:35 ] Zahtev je obrađen.
+[ Nit 20 ] [ 12:15:35 ] Radnik 5: zahtev završen sa greškom za 171ms
+[ Nit 20 ] [ 12:15:38 ] Primljen novi zahtev: http://localhost:8080/?q=school
+[ Nit 20 ] [ 12:15:38 ] Keš promašaj za ključ: school. Pokrećem async API poziv...
+[ Nit 20 ] [ 12:15:38 ] Greška pri parsiranju API odgovora: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 20 ] [ 12:15:38 ] API poziv nije uspeo za ključ school: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 20 ] [ 12:15:38 ] Greška pri obradi ključa school: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 20 ] [ 12:15:38 ] Zahtev je obrađen.
+[ Nit 20 ] [ 12:15:38 ] Radnik 6: zahtev završen sa greškom za 184ms
+[ Nit 3 ] [ 12:15:42 ] Primljen novi zahtev: http://localhost:8080/?q=city
+[ Nit 3 ] [ 12:15:42 ] Keš promašaj za ključ: city. Pokrećem async API poziv...
+[ Nit 3 ] [ 12:15:42 ] Greška pri parsiranju API odgovora: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 3 ] [ 12:15:42 ] API poziv nije uspeo za ključ city: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 3 ] [ 12:15:42 ] Greška pri obradi ključa city: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 3 ] [ 12:15:42 ] Zahtev je obrađen.
+[ Nit 3 ] [ 12:15:42 ] Radnik 7: zahtev završen sa greškom za 169ms
+[ Nit 20 ] [ 12:15:44 ] Primljen novi zahtev: http://localhost:8080/?q=nevada
+[ Nit 20 ] [ 12:15:44 ] Keš promašaj za ključ: nevada. Pokrećem async API poziv...
+[ Nit 20 ] [ 12:15:45 ] Greška pri parsiranju API odgovora: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 20 ] [ 12:15:45 ] API poziv nije uspeo za ključ nevada: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 20 ] [ 12:15:45 ] Greška pri obradi ključa nevada: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 20 ] [ 12:15:45 ] Zahtev je obrađen.
+[ Nit 20 ] [ 12:15:45 ] Radnik 1: zahtev završen sa greškom za 173ms
+[ Nit 22 ] [ 12:15:46 ] Primljen novi zahtev: http://localhost:8080/?q=nebraska
+[ Nit 22 ] [ 12:15:46 ] Keš promašaj za ključ: nebraska. Pokrećem async API poziv...
+[ Nit 22 ] [ 12:15:47 ] Greška pri parsiranju API odgovora: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 22 ] [ 12:15:47 ] API poziv nije uspeo za ključ nebraska: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 22 ] [ 12:15:47 ] Greška pri obradi ključa nebraska: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 22 ] [ 12:15:47 ] Zahtev je obrađen.
+[ Nit 22 ] [ 12:15:47 ] Radnik 2: zahtev završen sa greškom za 184ms
+[ Nit 20 ] [ 12:15:49 ] Primljen novi zahtev: http://localhost:8080/?q=drink
+[ Nit 20 ] [ 12:15:49 ] Keš promašaj za ključ: drink. Pokrećem async API poziv...
+[ Nit 20 ] [ 12:15:49 ] Greška pri parsiranju API odgovora: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 20 ] [ 12:15:49 ] API poziv nije uspeo za ključ drink: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 20 ] [ 12:15:49 ] Greška pri obradi ključa drink: Response status code does not indicate success: 429 (Too Many Requests).
+[ Nit 20 ] [ 12:15:49 ] Zahtev je obrađen.
+[ Nit 20 ] [ 12:15:49 ] Radnik 3: zahtev završen sa greškom za 167ms
+[ Nit 20 ] [ 12:16:34 ] Primljen novi zahtev: http://localhost:8080/?q=machine learning
+[ Nit 20 ] [ 12:16:34 ] Keš promašaj za ključ: machine learning. Pokrećem async API poziv...
+[ Nit 22 ] [ 12:16:34 ] API poziv uspešno završen za ključ: machine learning, dobijeno 10 članaka.
+[ Nit 22 ] [ 12:16:34 ] Zahtev je obrađen.
+[ Nit 22 ] [ 12:16:34 ] Radnik 0: zahtev obrađen za 480ms
+[ Nit 20 ] [ 12:16:44 ] Primljen novi zahtev: http://localhost:8080/?q=machine learning
+[ Nit 20 ] [ 12:16:44 ] Keš pogodak za ključ: machine learning
+[ Nit 20 ] [ 12:16:44 ] Zahtev je obrađen.
+[ Nit 20 ] [ 12:16:44 ] Radnik 4: zahtev obrađen za 3ms
+[ Nit 13 ] [ 12:21:50 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 13 ] [ 12:21:50 ] 
+================ CACHE STATISTIKE ================
+Pogodaka:                 3
+Promasaja:                19
+Hit rate:                 13.64%
+LRU izbacivanja:          0
+Stampede sprecavanja:     0
+Cleanup izbacivanja:      19
+Trenutno u kešu:          0/10
+Keš TTL:                  20 seconds
+==================================================
+[ Nit 13 ] [ 12:21:50 ] Radnik 5: zahtev obrađen za 4ms
+[ Nit 11 ] [ 12:27:12 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 11 ] [ 12:27:12 ] Keš promašaj za ključ: artificial intelligence. Pokrećem async API poziv...
+[ Nit 9 ] [ 12:27:12 ] API poziv uspešno završen za ključ: artificial intelligence, dobijeno 10 članaka.
+[ Nit 9 ] [ 12:27:12 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:27:12 ] Radnik 6: zahtev obrađen za 702ms
+[ Nit 11 ] [ 12:27:35 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 11 ] [ 12:27:35 ] Keš promašaj za ključ: artificial intelligence. Pokrećem async API poziv...
+[ Nit 5 ] [ 12:27:36 ] API poziv uspešno završen za ključ: artificial intelligence, dobijeno 10 članaka.
+[ Nit 5 ] [ 12:27:36 ] Zahtev je obrađen.
+[ Nit 5 ] [ 12:27:36 ] Radnik 7: zahtev obrađen za 237ms
+[ Nit 11 ] [ 12:27:37 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 11 ] [ 12:27:37 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 11 ] [ 12:27:37 ] Zahtev je obrađen.
+[ Nit 11 ] [ 12:27:37 ] Radnik 1: zahtev obrađen za 8ms
+[ Nit 5 ] [ 12:27:37 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 5 ] [ 12:27:37 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 5 ] [ 12:27:37 ] Zahtev je obrađen.
+[ Nit 5 ] [ 12:27:37 ] Radnik 2: zahtev obrađen za 7ms
+[ Nit 9 ] [ 12:27:38 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 9 ] [ 12:27:38 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 9 ] [ 12:27:38 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:27:38 ] Radnik 3: zahtev obrađen za 11ms
+[ Nit 5 ] [ 12:27:39 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 5 ] [ 12:27:39 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 5 ] [ 12:27:39 ] Zahtev je obrađen.
+[ Nit 5 ] [ 12:27:39 ] Radnik 0: zahtev obrađen za 8ms
+[ Nit 9 ] [ 12:27:40 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 9 ] [ 12:27:40 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 9 ] [ 12:27:40 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:27:40 ] Radnik 4: zahtev obrađen za 8ms
+[ Nit 9 ] [ 12:28:00 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 9 ] [ 12:28:00 ] 
+================ CACHE STATISTIKE ================
+Pogodaka:                 8
+Promasaja:                21
+Hit rate:                 27.59%
+LRU izbacivanja:          0
+Stampede sprecavanja:     0
+Cleanup izbacivanja:      20
+Trenutno u kešu:          1/10
+Keš TTL:                  20 seconds
+==================================================
+[ Nit 9 ] [ 12:28:00 ] Radnik 5: zahtev obrađen za 3ms
+[ Nit 23 ] [ 12:28:13 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 23 ] [ 12:28:13 ] Keš promašaj za ključ: artificial intelligence. Pokrećem async API poziv...
+[ Nit 9 ] [ 12:28:13 ] API poziv uspešno završen za ključ: artificial intelligence, dobijeno 10 članaka.
+[ Nit 9 ] [ 12:28:13 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:28:13 ] Radnik 6: zahtev obrađen za 212ms
+[ Nit 9 ] [ 12:28:14 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 9 ] [ 12:28:14 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 9 ] [ 12:28:14 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:28:14 ] Radnik 7: zahtev obrađen za 10ms
+[ Nit 23 ] [ 12:28:15 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 23 ] [ 12:28:15 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 23 ] [ 12:28:15 ] Zahtev je obrađen.
+[ Nit 23 ] [ 12:28:15 ] Radnik 1: zahtev obrađen za 8ms
+[ Nit 11 ] [ 12:28:16 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 11 ] [ 12:28:16 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 11 ] [ 12:28:16 ] Zahtev je obrađen.
+[ Nit 11 ] [ 12:28:16 ] Radnik 2: zahtev obrađen za 7ms
+[ Nit 23 ] [ 12:28:17 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 23 ] [ 12:28:17 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 23 ] [ 12:28:17 ] Zahtev je obrađen.
+[ Nit 23 ] [ 12:28:17 ] Radnik 3: zahtev obrađen za 7ms
+[ Nit 9 ] [ 12:28:18 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 9 ] [ 12:28:18 ] 
+================ CACHE STATISTIKE ================
+Pogodaka:                 12
+Promasaja:                22
+Hit rate:                 35.29%
+LRU izbacivanja:          0
+Stampede sprecavanja:     0
+Cleanup izbacivanja:      21
+Trenutno u kešu:          1/10
+Keš TTL:                  20 seconds
+==================================================
+[ Nit 9 ] [ 12:28:18 ] Radnik 0: zahtev obrađen za 2ms
+[ Nit 10 ] [ 12:30:06 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 10 ] [ 12:30:06 ] Keš promašaj za ključ: basket. Pokrećem async API poziv...
+[ Nit 8 ] [ 12:30:07 ] API poziv uspešno završen za ključ: basket, dobijeno 10 članaka.
+[ Nit 8 ] [ 12:30:07 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:30:07 ] Radnik 4: zahtev obrađen za 590ms
+[ Nit 10 ] [ 12:30:09 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 10 ] [ 12:30:09 ] Keš pogodak za ključ: basket
+[ Nit 10 ] [ 12:30:09 ] Zahtev je obrađen.
+[ Nit 10 ] [ 12:30:09 ] Radnik 5: zahtev obrađen za 8ms
+[ Nit 10 ] [ 12:30:10 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 10 ] [ 12:30:10 ] Keš pogodak za ključ: basket
+[ Nit 10 ] [ 12:30:10 ] Zahtev je obrađen.
+[ Nit 10 ] [ 12:30:10 ] Radnik 6: zahtev obrađen za 8ms
+[ Nit 8 ] [ 12:30:11 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 8 ] [ 12:30:11 ] Keš pogodak za ključ: basket
+[ Nit 8 ] [ 12:30:11 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:30:11 ] Radnik 7: zahtev obrađen za 7ms
+[ Nit 10 ] [ 12:30:12 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 10 ] [ 12:30:12 ] Keš pogodak za ključ: basket
+[ Nit 10 ] [ 12:30:12 ] Zahtev je obrađen.
+[ Nit 10 ] [ 12:30:12 ] Radnik 1: zahtev obrađen za 8ms
+[ Nit 10 ] [ 12:30:13 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 10 ] [ 12:30:13 ] Keš pogodak za ključ: basket
+[ Nit 10 ] [ 12:30:13 ] Zahtev je obrađen.
+[ Nit 10 ] [ 12:30:13 ] Radnik 2: zahtev obrađen za 13ms
+[ Nit 8 ] [ 12:30:14 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 8 ] [ 12:30:14 ] Keš pogodak za ključ: basket
+[ Nit 8 ] [ 12:30:14 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:30:14 ] Radnik 3: zahtev obrađen za 6ms
+[ Nit 10 ] [ 12:30:15 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 10 ] [ 12:30:15 ] Keš pogodak za ključ: basket
+[ Nit 10 ] [ 12:30:15 ] Zahtev je obrađen.
+[ Nit 10 ] [ 12:30:15 ] Radnik 0: zahtev obrađen za 8ms
+[ Nit 8 ] [ 12:30:15 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 8 ] [ 12:30:15 ] Keš pogodak za ključ: basket
+[ Nit 8 ] [ 12:30:16 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:30:16 ] Radnik 4: zahtev obrađen za 10ms
+[ Nit 10 ] [ 12:30:16 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 10 ] [ 12:30:16 ] Keš pogodak za ključ: basket
+[ Nit 10 ] [ 12:30:16 ] Zahtev je obrađen.
+[ Nit 10 ] [ 12:30:16 ] Radnik 5: zahtev obrađen za 12ms
+[ Nit 8 ] [ 12:30:33 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 8 ] [ 12:30:33 ] 
+================ CACHE STATISTIKE ================
+Pogodaka:                 21
+Promasaja:                23
+Hit rate:                 47.73%
+LRU izbacivanja:          0
+Stampede sprecavanja:     0
+Cleanup izbacivanja:      22
+Trenutno u kešu:          1/10
+Keš TTL:                  20 seconds
+==================================================
+[ Nit 8 ] [ 12:30:33 ] Radnik 6: zahtev obrađen za 4ms
+[ Nit 9 ] [ 12:31:47 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 9 ] [ 12:31:47 ] 
+================ CACHE STATISTIKE ================
+Pogodaka:                 21
+Promasaja:                23
+Hit rate:                 47.73%
+LRU izbacivanja:          0
+Stampede sprecavanja:     0
+Cleanup izbacivanja:      23
+Trenutno u kešu:          0/10
+Keš TTL:                  20 seconds
+==================================================
+[ Nit 9 ] [ 12:31:47 ] Radnik 7: zahtev obrađen za 4ms
+[ Nit 24 ] [ 12:32:01 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 24 ] [ 12:32:01 ] Keš promašaj za ključ: food. Pokrećem async API poziv...
+[ Nit 8 ] [ 12:32:02 ] API poziv uspešno završen za ključ: food, dobijeno 10 članaka.
+[ Nit 8 ] [ 12:32:02 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:32:02 ] Radnik 1: zahtev završen sa greškom za 649ms
+[ Nit 8 ] [ 12:32:02 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 8 ] [ 12:32:02 ] Keš pogodak za ključ: food
+[ Nit 8 ] [ 12:32:02 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:32:02 ] Radnik 2: zahtev obrađen za 15ms
+[ Nit 24 ] [ 12:32:02 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 24 ] [ 12:32:02 ] Keš pogodak za ključ: food
+[ Nit 24 ] [ 12:32:02 ] Zahtev je obrađen.
+[ Nit 24 ] [ 12:32:02 ] Radnik 3: zahtev obrađen za 5ms
+[ Nit 8 ] [ 12:32:02 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 8 ] [ 12:32:02 ] Keš pogodak za ključ: food
+[ Nit 8 ] [ 12:32:02 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:32:02 ] Radnik 0: zahtev obrađen za 10ms
+[ Nit 24 ] [ 12:32:02 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 24 ] [ 12:32:02 ] Keš pogodak za ključ: food
+[ Nit 24 ] [ 12:32:02 ] Zahtev je obrađen.
+[ Nit 24 ] [ 12:32:02 ] Radnik 4: zahtev obrađen za 5ms
+[ Nit 8 ] [ 12:32:02 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 8 ] [ 12:32:02 ] Keš pogodak za ključ: food
+[ Nit 8 ] [ 12:32:02 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:32:02 ] Radnik 5: zahtev obrađen za 5ms
+[ Nit 24 ] [ 12:32:03 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 24 ] [ 12:32:03 ] Keš pogodak za ključ: food
+[ Nit 24 ] [ 12:32:03 ] Zahtev je obrađen.
+[ Nit 24 ] [ 12:32:03 ] Radnik 6: zahtev obrađen za 9ms
+[ Nit 8 ] [ 12:32:03 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 8 ] [ 12:32:03 ] Keš pogodak za ključ: food
+[ Nit 8 ] [ 12:32:03 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:32:03 ] Radnik 7: zahtev obrađen za 7ms
+[ Nit 9 ] [ 12:32:03 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 12:32:03 ] Keš pogodak za ključ: food
+[ Nit 9 ] [ 12:32:03 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:32:03 ] Radnik 1: zahtev obrađen za 6ms
+[ Nit 9 ] [ 12:32:03 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 12:32:03 ] Keš pogodak za ključ: food
+[ Nit 9 ] [ 12:32:03 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:32:03 ] Radnik 2: zahtev obrađen za 7ms
+[ Nit 8 ] [ 12:32:03 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 8 ] [ 12:32:03 ] Keš pogodak za ključ: food
+[ Nit 8 ] [ 12:32:03 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:32:03 ] Radnik 3: zahtev obrađen za 9ms
+[ Nit 8 ] [ 12:32:03 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 8 ] [ 12:32:03 ] Keš pogodak za ključ: food
+[ Nit 8 ] [ 12:32:03 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:32:03 ] Radnik 0: zahtev obrađen za 4ms
+[ Nit 9 ] [ 12:32:03 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 12:32:03 ] Keš pogodak za ključ: food
+[ Nit 9 ] [ 12:32:03 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:32:03 ] Radnik 4: zahtev obrađen za 9ms
+[ Nit 27 ] [ 12:32:03 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 27 ] [ 12:32:04 ] Keš pogodak za ključ: food
+[ Nit 27 ] [ 12:32:04 ] Zahtev je obrađen.
+[ Nit 27 ] [ 12:32:04 ] Radnik 5: zahtev obrađen za 8ms
+[ Nit 8 ] [ 12:32:04 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 8 ] [ 12:32:04 ] Keš pogodak za ključ: food
+[ Nit 8 ] [ 12:32:04 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:32:04 ] Radnik 6: zahtev obrađen za 15ms
+[ Nit 9 ] [ 12:32:04 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 12:32:04 ] Keš pogodak za ključ: food
+[ Nit 9 ] [ 12:32:04 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:32:04 ] Radnik 7: zahtev obrađen za 9ms
+[ Nit 9 ] [ 12:32:04 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 12:32:04 ] Keš pogodak za ključ: food
+[ Nit 9 ] [ 12:32:04 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:32:04 ] Radnik 1: zahtev obrađen za 24ms
+[ Nit 8 ] [ 12:32:04 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 8 ] [ 12:32:04 ] Keš pogodak za ključ: food
+[ Nit 8 ] [ 12:32:04 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:32:04 ] Radnik 2: zahtev obrađen za 9ms
+[ Nit 9 ] [ 12:32:04 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 12:32:04 ] Keš pogodak za ključ: food
+[ Nit 9 ] [ 12:32:04 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:32:04 ] Radnik 3: zahtev obrađen za 6ms
+[ Nit 8 ] [ 12:32:04 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 8 ] [ 12:32:04 ] Keš pogodak za ključ: food
+[ Nit 8 ] [ 12:32:04 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:32:04 ] Radnik 0: zahtev obrađen za 7ms
+[ Nit 9 ] [ 12:32:04 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 12:32:04 ] Keš pogodak za ključ: food
+[ Nit 9 ] [ 12:32:04 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:32:04 ] Radnik 4: zahtev obrađen za 10ms
+[ Nit 9 ] [ 12:32:05 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 12:32:05 ] Keš pogodak za ključ: food
+[ Nit 9 ] [ 12:32:05 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:32:05 ] Radnik 5: zahtev obrađen za 6ms
+[ Nit 8 ] [ 12:32:05 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 8 ] [ 12:32:05 ] Keš pogodak za ključ: food
+[ Nit 8 ] [ 12:32:05 ] Zahtev je obrađen.
+[ Nit 8 ] [ 12:32:05 ] Radnik 6: zahtev obrađen za 10ms
+[ Nit 9 ] [ 12:32:05 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 12:32:05 ] Keš pogodak za ključ: food
+[ Nit 9 ] [ 12:32:05 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:32:05 ] Radnik 7: zahtev obrađen za 5ms
+[ Nit 24 ] [ 12:32:05 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 24 ] [ 12:32:05 ] Keš pogodak za ključ: food
+[ Nit 24 ] [ 12:32:05 ] Zahtev je obrađen.
+[ Nit 24 ] [ 12:32:05 ] Radnik 1: zahtev obrađen za 12ms
+[ Nit 24 ] [ 12:32:05 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 24 ] [ 12:32:05 ] Keš pogodak za ključ: food
+[ Nit 24 ] [ 12:32:05 ] Zahtev je obrađen.
+[ Nit 24 ] [ 12:32:05 ] Radnik 2: zahtev obrađen za 8ms
+[ Nit 9 ] [ 12:32:05 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 9 ] [ 12:32:05 ] Keš pogodak za ključ: food
+[ Nit 9 ] [ 12:32:05 ] Zahtev je obrađen.
+[ Nit 9 ] [ 12:32:05 ] Radnik 3: zahtev obrađen za 17ms
+[ Nit 24 ] [ 12:32:05 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 24 ] [ 12:32:05 ] Keš pogodak za ključ: food
+[ Nit 24 ] [ 12:32:05 ] Zahtev je obrađen.
+[ Nit 24 ] [ 12:32:05 ] Radnik 0: zahtev obrađen za 7ms
+[ Nit 24 ] [ 12:32:28 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 24 ] [ 12:32:28 ] 
+================ CACHE STATISTIKE ================
+Pogodaka:                 48
+Promasaja:                24
+Hit rate:                 66.67%
+LRU izbacivanja:          0
+Stampede sprecavanja:     0
+Cleanup izbacivanja:      24
+Trenutno u kešu:          0/10
+Keš TTL:                  20 seconds
+==================================================
+[ Nit 24 ] [ 12:32:28 ] Radnik 4: zahtev obrađen za 4ms
+[ Nit 23 ] [ 12:34:48 ] Radnik 4 završen.
+[ Nit 5 ] [ 12:34:48 ] Radnik 3 završen.
+[ Nit 5 ] [ 12:34:48 ] Radnik 7 završen.
+[ Nit 21 ] [ 12:34:48 ] Radnik 5 završen.
+[ Nit 11 ] [ 12:34:48 ] Radnik 0 završen.
+[ Nit 14 ] [ 12:34:48 ] Radnik 2 završen.
+[ Nit 12 ] [ 12:34:48 ] Radnik 1 završen.
+[ Nit 13 ] [ 12:34:48 ] Radnik 6 završen.
+[ Nit 7 ] [ 12:34:48 ] Server je isključen.
+--------------------------------------------------------------------------------
+[ Nit 2 ] [ 12:34:58 ] Keš cleanup nit je pokrenuta.
+[ Nit 5 ] [ 12:34:58 ] Server je pokrenut.
+[ Nit 8 ] [ 12:34:58 ] Radnik 0 pokrenut.
+[ Nit 9 ] [ 12:34:58 ] Radnik 1 pokrenut.
+[ Nit 11 ] [ 12:34:58 ] Radnik 3 pokrenut.
+[ Nit 10 ] [ 12:34:58 ] Radnik 2 pokrenut.
+[ Nit 12 ] [ 12:34:58 ] Radnik 4 pokrenut.
+[ Nit 13 ] [ 12:34:58 ] Radnik 5 pokrenut.
+[ Nit 14 ] [ 12:34:58 ] Radnik 6 pokrenut.
+[ Nit 15 ] [ 12:34:58 ] Radnik 7 pokrenut.
+[ Nit 10 ] [ 12:35:07 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 10 ] [ 12:35:07 ] Keš promašaj za ključ: basket. Pokrećem async API poziv...
+[ Nit 15 ] [ 12:35:13 ] API poziv uspešno završen za ključ: basket, dobijeno 10 članaka.
+[ Nit 15 ] [ 12:35:13 ] Zahtev je obrađen.
+[ Nit 10 ] [ 12:35:13 ] Radnik 1: zahtev obrađen za 5925ms
+[ Nit 15 ] [ 12:35:24 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 15 ] [ 12:35:24 ] Keš pogodak za ključ: basket
+[ Nit 15 ] [ 12:35:24 ] Zahtev je obrađen.
+[ Nit 10 ] [ 12:35:24 ] Radnik 3: zahtev obrađen za 10ms
+[ Nit 14 ] [ 12:35:27 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 14 ] [ 12:35:27 ] Keš pogodak za ključ: basket
+[ Nit 14 ] [ 12:35:27 ] Zahtev je obrađen.
+[ Nit 14 ] [ 12:35:27 ] Radnik 2: zahtev obrađen za 3ms
+[ Nit 15 ] [ 12:35:42 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 15 ] [ 12:35:42 ] Keš promašaj za ključ: basket. Pokrećem async API poziv...
+[ Nit 14 ] [ 12:35:42 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 15 ] [ 12:35:43 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 10 ] [ 12:35:44 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 10 ] [ 12:35:44 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 14 ] [ 12:35:45 ] Primljen novi zahtev: http://localhost:8080/?q=basket
+[ Nit 10 ] [ 12:35:47 ] API poziv uspešno završen za ključ: basket, dobijeno 10 članaka.
+[ Nit 14 ] [ 12:35:47 ] Keš stampedo sprečen za ključ: basket
+[ Nit 15 ] [ 12:35:47 ] Keš stampedo sprečen za ključ: basket
+[ Nit 14 ] [ 12:35:47 ] Zahtev je obrađen.
+[ Nit 10 ] [ 12:35:47 ] Zahtev je obrađen.
+[ Nit 21 ] [ 12:35:47 ] Keš stampedo sprečen za ključ: basket
+[ Nit 14 ] [ 12:35:47 ] Radnik 4: zahtev završen sa greškom za 4555ms
+[ Nit 15 ] [ 12:35:47 ] Zahtev je obrađen.
+[ Nit 14 ] [ 12:35:47 ] Keš stampedo sprečen za ključ: basket
+[ Nit 22 ] [ 12:35:47 ] Radnik 0: zahtev završen sa greškom za 5232ms
+[ Nit 23 ] [ 12:35:47 ] Radnik 5: zahtev završen sa greškom za 3814ms
+[ Nit 21 ] [ 12:35:47 ] Zahtev je obrađen.
+[ Nit 15 ] [ 12:35:47 ] Keš stampedo sprečen za ključ: basket
+[ Nit 14 ] [ 12:35:47 ] Zahtev je obrađen.
+[ Nit 21 ] [ 12:35:47 ] Radnik 6: zahtev završen sa greškom za 3181ms
+[ Nit 15 ] [ 12:35:47 ] Zahtev je obrađen.
+[ Nit 14 ] [ 12:35:47 ] Radnik 7: zahtev završen sa greškom za 2555ms
+[ Nit 15 ] [ 12:35:47 ] Radnik 1: zahtev obrađen za 1920ms
+[ Nit 15 ] [ 12:36:07 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 15 ] [ 12:36:07 ] 
+================ CACHE STATISTIKE ================
+Pogodaka:                 2
+Promasaja:                2
+Hit rate:                 50.00%
+LRU izbacivanja:          0
+Stampede sprecavanja:     5
+Cleanup izbacivanja:      1
+Trenutno u kešu:          1/10
+Keš TTL:                  20 seconds
+==================================================
+[ Nit 15 ] [ 12:36:07 ] Radnik 3: zahtev obrađen za 8ms
+[ Nit 24 ] [ 12:36:16 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 24 ] [ 12:36:16 ] Keš promašaj za ključ: artificial intelligence. Pokrećem async API poziv...
+[ Nit 14 ] [ 12:36:17 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 24 ] [ 12:36:20 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 15 ] [ 12:36:21 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 15 ] [ 12:36:21 ] API poziv uspešno završen za ključ: artificial intelligence, dobijeno 10 članaka.
+[ Nit 24 ] [ 12:36:21 ] Keš stampedo sprečen za ključ: artificial intelligence
+[ Nit 15 ] [ 12:36:21 ] Zahtev je obrađen.
+[ Nit 14 ] [ 12:36:21 ] Keš stampedo sprečen za ključ: artificial intelligence
+[ Nit 15 ] [ 12:36:21 ] Radnik 2: zahtev završen sa greškom za 5460ms
+[ Nit 24 ] [ 12:36:21 ] Zahtev je obrađen.
+[ Nit 14 ] [ 12:36:21 ] Zahtev je obrađen.
+[ Nit 25 ] [ 12:36:21 ] Keš stampedo sprečen za ključ: artificial intelligence
+[ Nit 24 ] [ 12:36:21 ] Radnik 4: zahtev završen sa greškom za 4449ms
+[ Nit 14 ] [ 12:36:21 ] Radnik 0: zahtev završen sa greškom za 906ms
+[ Nit 25 ] [ 12:36:21 ] Zahtev je obrađen.
+[ Nit 25 ] [ 12:36:21 ] Radnik 5: zahtev završen sa greškom za 231ms
+[ Nit 25 ] [ 12:36:22 ] Primljen novi zahtev: http://localhost:8080/?q=artificial intelligence
+[ Nit 25 ] [ 12:36:22 ] Keš pogodak za ključ: artificial intelligence
+[ Nit 25 ] [ 12:36:22 ] Zahtev je obrađen.
+[ Nit 25 ] [ 12:36:22 ] Radnik 6: zahtev obrađen za 9ms
+[ Nit 26 ] [ 12:36:37 ] Primljen novi zahtev: http://localhost:8080/stats
+[ Nit 26 ] [ 12:36:37 ] 
+================ CACHE STATISTIKE ================
+Pogodaka:                 3
+Promasaja:                3
+Hit rate:                 50.00%
+LRU izbacivanja:          0
+Stampede sprecavanja:     8
+Cleanup izbacivanja:      2
+Trenutno u kešu:          1/10
+Keš TTL:                  20 seconds
+==================================================
+[ Nit 26 ] [ 12:36:37 ] Radnik 7: zahtev obrađen za 4ms
+[ Nit 25 ] [ 12:36:49 ] Primljen novi zahtev: http://localhost:8080/?q=drink
+[ Nit 25 ] [ 12:36:49 ] Keš promašaj za ključ: drink. Pokrećem async API poziv...
+[ Nit 25 ] [ 12:36:55 ] API poziv uspešno završen za ključ: drink, dobijeno 10 članaka.
+[ Nit 25 ] [ 12:36:55 ] Zahtev je obrađen.
+[ Nit 25 ] [ 12:36:55 ] Radnik 1: zahtev obrađen za 5436ms
+[ Nit 26 ] [ 12:37:01 ] Primljen novi zahtev: http://localhost:8080/?q=nebraska
+[ Nit 26 ] [ 12:37:01 ] Keš promašaj za ključ: nebraska. Pokrećem async API poziv...
+[ Nit 26 ] [ 12:37:06 ] API poziv uspešno završen za ključ: nebraska, dobijeno 10 članaka.
+[ Nit 26 ] [ 12:37:06 ] Zahtev je obrađen.
+[ Nit 26 ] [ 12:37:06 ] Radnik 3: zahtev obrađen za 5424ms
+[ Nit 25 ] [ 12:37:40 ] Radnik 3 završen.
+[ Nit 25 ] [ 12:37:40 ] Radnik 1 završen.
+[ Nit 26 ] [ 12:37:40 ] Radnik 7 završen.
+[ Nit 3 ] [ 12:37:40 ] Radnik 6 završen.
+[ Nit 26 ] [ 12:37:40 ] Radnik 5 završen.
+[ Nit 25 ] [ 12:37:40 ] Radnik 0 završen.
+[ Nit 27 ] [ 12:37:40 ] Radnik 4 završen.
+[ Nit 28 ] [ 12:37:40 ] Radnik 2 završen.
+[ Nit 7 ] [ 12:37:40 ] Server je isključen.
+--------------------------------------------------------------------------------
