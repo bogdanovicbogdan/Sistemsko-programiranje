@@ -8,21 +8,20 @@ namespace Drugi_projekat
 {
     public class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             try
             {
                 Server server = Server.Instance;
 
-                Thread serverThread = new Thread(server.Start);
-                serverThread.Start();
+                Task serverTask = Task.Run(async () => await server.Start());
 
                 Console.WriteLine("Pritisnite Enter za zaustavljanje servera...");
-                while (Console.ReadKey().Key != ConsoleKey.Enter)
-                {}
+
+                await Task.Run(() => Console.ReadLine());
 
                 server.Stop();
-                serverThread.Join();
+                await serverTask;
             }
             catch (Exception e)
             {

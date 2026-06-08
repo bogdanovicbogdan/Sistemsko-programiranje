@@ -1,50 +1,44 @@
 using System;
 using System.Net;
+using System.Threading.Channels;
 
 namespace Drugi_projekat
 {
     public class RedZahteva
     {
-        private Queue<HttpListenerContext> _zahtevi;
-        private object _lock = new object();
+        private readonly Channel<HttpListenerContext> _channel;
 
         public RedZahteva()
         {
-            _zahtevi = new Queue<HttpListenerContext>();
+            _channel = Channel.CreateUnbounded<HttpListenerContext>(
+                new UnboundedChannelOptions{SingleWriter = true, SingleReader = false});
         }
 
         public void DodajZahtev(HttpListenerContext zahtev)
         {
-            lock (_lock)
-            {
-                _zahtevi.Enqueue(zahtev);
-                Monitor.Pulse(_lock);
-            }
+            if(!_channel.Writer.TryWrite(zahtev))
+                Logger.Log("Upozorenje: nije moguce dodati zahtev u red (kanal zatvoren).");
         }
 
-        public HttpListenerContext? UzmiZahtev(bool serverAktivan)
+        public async Task<HttpListenerContext?> UzmiZahtevAsync(CancellationToken ct)
         {
-            lock (_lock)
+            try
             {
-                while(_zahtevi.Count == 0 && serverAktivan)
-                {
-                    Monitor.Wait(_lock);
-                }
-
-                if (_zahtevi.Count > 0)
-                {
-                    return _zahtevi.Dequeue();
-                }
+                return await _channel.Reader.ReadAsync(ct);
+            }
+            catch(OperationCanceledException)
+            {
+                return null;
+            }
+            catch(ChannelClosedException)
+            {
                 return null;
             }
         }
 
         public void PrekiniSve()
         {
-            lock (_lock)
-            {
-                Monitor.PulseAll(_lock);
-            }
+            _channel.Writer.TryComplete();
         }
     }
 }
