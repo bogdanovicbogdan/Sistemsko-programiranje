@@ -152,8 +152,6 @@ namespace Drugi_projekat
 
             try
             {
-                await Task.Delay(5000);
-
                 string jsonString = await _httpClient.GetStringAsync(url);
 
                 using (var doc = JsonDocument.Parse(jsonString))
