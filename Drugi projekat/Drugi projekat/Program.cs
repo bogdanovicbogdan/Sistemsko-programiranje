@@ -14,11 +14,12 @@ namespace Drugi_projekat
             {
                 Server server = Server.Instance;
 
-                Task serverTask = Task.Run(async () => await server.Start());
+                // Task serverTask = Task.Run(async () => await server.Start());
+                var serverTask=server.Start();
 
                 Console.WriteLine("Pritisnite Enter za zaustavljanje servera...");
 
-                await Task.Run(() => Console.ReadLine());
+                Console.ReadLine();
 
                 server.Stop();
                 await serverTask;

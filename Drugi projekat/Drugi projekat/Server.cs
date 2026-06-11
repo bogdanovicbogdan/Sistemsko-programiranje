@@ -12,7 +12,7 @@ namespace Drugi_projekat
         private bool _aktivan = false;
         private static int velicinaKesa = 10;
         private static int ttlSekunadi = 20; // 5 minuta
-        public static int brojNiti = 8;
+        public static int brojNiti = 200;
         private static RedZahteva _redZahteva = new RedZahteva();
         private static Cache _cache = new Cache(velicinaKesa, ttlSekunadi);
         private CancellationTokenSource _cts = new CancellationTokenSource();
