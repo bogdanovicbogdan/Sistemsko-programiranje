@@ -10,7 +10,7 @@ namespace Drugi_projekat
         private readonly HttpListener _listener;
         private readonly string _url = "http://localhost:8080/";
         private bool _aktivan = false;
-        private static int velicinaKesa = 10;
+        private static int velicinaKesa = 3;
         private static int ttlSekunadi = 60;
         public static int brojNiti = 10;
         private static RedZahteva _redZahteva = new RedZahteva();
@@ -45,7 +45,7 @@ namespace Drugi_projekat
             Console.CancelKeyPress += (_, e) =>
             {
                 e.Cancel = true;
-                Logger.Log("Pokrenuto isključivanje servera");
+                Console.WriteLine("Pokrenuto isključivanje servera");
                 Stop();
             };
 

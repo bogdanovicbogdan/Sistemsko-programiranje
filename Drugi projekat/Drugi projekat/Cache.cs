@@ -280,8 +280,6 @@ namespace Drugi_projekat
                     $"Keš TTL:                  {_ttl.TotalSeconds} seconds\n" +
                     "==================================================";
 
-                Console.WriteLine(stats);
-
                 Logger.Log(stats);
 
                 return stats;
