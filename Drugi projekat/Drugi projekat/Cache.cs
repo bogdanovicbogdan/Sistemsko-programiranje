@@ -7,7 +7,7 @@ namespace Drugi_projekat
 {
     public class Cache : IDisposable
     {
-        private readonly Dictionary<string, CacheStavka> _cache;
+        private readonly ConcurrentDictionary<string, CacheStavka> _cache;
         private readonly LinkedList<string> _lruLista;
         private static string? _apiKey;
         private static readonly HttpClient _httpClient = new HttpClient();
@@ -29,7 +29,7 @@ namespace Drugi_projekat
         {
             _maxVelicina = maxVelicina;
             _ttl = TimeSpan.FromSeconds(ttlSeconds);
-            _cache = new Dictionary<string, CacheStavka>();
+            _cache = new ConcurrentDictionary<string, CacheStavka>();
             _lruLista = new LinkedList<string>();
 
             Env.Load();
@@ -50,30 +50,32 @@ namespace Drugi_projekat
         {
             string kljuc = GenerisiCacheKey(query);
 
-            lock (_cacheStructureLock)
+            if (_cache.TryGetValue(kljuc, out CacheStavka? stavka) && !stavka.IsExpired)
             {
-                if (_cache.TryGetValue(kljuc, out CacheStavka? stavka) && !stavka.IsExpired)
+                lock (_cacheStructureLock)
                 {
-                    _lruLista.Remove(stavka.LruNode);
-                    _lruLista.AddFirst(stavka.LruNode);
+                    if (stavka.LruNode.List != null)
+                    {
+                        _lruLista.Remove(stavka.LruNode);
+                        _lruLista.AddFirst(stavka.LruNode);
+                    }
                     _brojPogodaka++;
                     Logger.Log($"Keš pogodak za ključ: {kljuc}");
-                    return stavka.Clanci;
                 }
+                return stavka.Clanci;
             }
 
             SemaphoreSlim keyLock = _keyLocks.GetOrAdd(kljuc, _ => new SemaphoreSlim(1, 1));
-
             await keyLock.WaitAsync();
             try
             {
-                lock(_cacheStructureLock)
+                if (_cache.TryGetValue(kljuc, out CacheStavka? stavka1) && !stavka1.IsExpired)
                 {
-                    if(_cache.TryGetValue(kljuc, out CacheStavka? stavka) && !stavka.IsExpired)
+                    lock (_cacheStructureLock)
                     {
                         _stampedoCekanja++;
                         Logger.Log($"Keš stampedo sprečen za ključ: {kljuc}");
-                        return stavka.Clanci;
+                        return stavka1.Clanci;
                     }
                 }
 
@@ -82,7 +84,7 @@ namespace Drugi_projekat
                 List<Clanak> rezultati = await FetchFromApiAsync(kljuc)
                     .ContinueWith(apiTask =>
                     {
-                        if(apiTask.IsFaulted)
+                        if (apiTask.IsFaulted)
                         {
                             Logger.Log($"API poziv nije uspeo za ključ {kljuc}: {apiTask.Exception?.InnerException?.Message}");
                             throw apiTask.Exception!.InnerException ?? new Exception("Nepoznata greška pri API pozivu.");
@@ -93,20 +95,22 @@ namespace Drugi_projekat
 
                     }, TaskContinuationOptions.ExecuteSynchronously);
 
-                lock(_cacheStructureLock)
+                lock (_cacheStructureLock)
                 {
                     _brojPromasaja++;
 
-                    if (_cache.TryGetValue(kljuc, out var staraStavka))
+                    if (_cache.TryRemove(kljuc, out var staraStavka))
                     {
-                        _lruLista.Remove(staraStavka.LruNode);
-                        _cache.Remove(kljuc);
+                        if (staraStavka.LruNode.List != null)
+                        {
+                            _lruLista.Remove(staraStavka.LruNode);
+                        }
                     }
 
-                    if(_cache.Count >= _maxVelicina && _lruLista.Last != null)
+                    if (_cache.Count >= _maxVelicina && _lruLista.Last != null)
                     {
                         string kljucZaBrisanje = _lruLista.Last.Value;
-                        if(_cache.Remove(kljucZaBrisanje, out var stariNode))
+                        if (_cache.TryRemove(kljucZaBrisanje, out var stariNode))
                         {
                             _lruLista.Remove(stariNode.LruNode);
                             _brojIzbacivanja++;
@@ -123,7 +127,7 @@ namespace Drugi_projekat
 
                 return rezultati;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger.Log($"Greška pri obradi ključa {kljuc}: {e.Message}");
                 throw;
@@ -222,7 +226,7 @@ namespace Drugi_projekat
                 {
                     Thread.Sleep(10000);
 
-                    lock(_cacheStructureLock)
+                    lock (_cacheStructureLock)
                     {
                         var keysToRemove = new List<string>();
 
@@ -234,10 +238,12 @@ namespace Drugi_projekat
 
                         foreach (var key in keysToRemove)
                         {
-                            if (_cache.ContainsKey(key))
+                            if (_cache.TryRemove(key, out var stavkaZaBrisanje))
                             {
-                                _lruLista.Remove(_cache[key].LruNode);
-                                _cache.Remove(key);
+                                if (stavkaZaBrisanje.LruNode.List != null)
+                                {
+                                    _lruLista.Remove(stavkaZaBrisanje.LruNode);
+                                }
                                 _brojCleanupIzbacivanja++;
                             }
 

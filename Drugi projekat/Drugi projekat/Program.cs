@@ -13,21 +13,14 @@ namespace Drugi_projekat
             try
             {
                 Server server = Server.Instance;
+                Task serverTask = server.Start();
 
-                // Task serverTask = Task.Run(async () => await server.Start());
-                var serverTask=server.Start();
-
-                Console.WriteLine("Pritisnite Enter za zaustavljanje servera...");
-
-                Console.ReadLine();
-
-                server.Stop();
                 await serverTask;
             }
             catch (Exception e)
             {
                 Console.WriteLine($"Doslo je do greske: {e.Message}");
-            }          
+            }
         }
     }
 }
