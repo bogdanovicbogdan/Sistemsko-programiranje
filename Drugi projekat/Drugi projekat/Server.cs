@@ -10,7 +10,7 @@ namespace Drugi_projekat
         private readonly HttpListener _listener;
         private readonly string _url = "http://localhost:8080/";
         private bool _aktivan = false;
-        private static int velicinaKesa = 3;
+        private static int velicinaKesa = 10;
         private static int ttlSekunadi = 60;
         public static int brojNiti = 10;
         private static RedZahteva _redZahteva = new RedZahteva();
@@ -46,6 +46,7 @@ namespace Drugi_projekat
             {
                 e.Cancel = true;
                 Console.WriteLine("Pokrenuto isključivanje servera");
+                Logger.Log("Isključivanje servera");
                 Stop();
             };
 
@@ -212,10 +213,6 @@ namespace Drugi_projekat
             response.ContentType = $"{contentType}; charset=utf-8";
             response.StatusCode = statusCode;
             response.ContentLength64 = buffer.Length;
-            // using (var output = response.OutputStream)
-            // {
-            //     output.Write(buffer, 0, buffer.Length);
-            // }
 
             await response.OutputStream.WriteAsync(buffer, 0, buffer.Length);
 

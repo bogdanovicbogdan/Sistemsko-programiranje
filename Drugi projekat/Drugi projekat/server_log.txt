@@ -5961,3 +5961,66 @@ Trenutno u kešu:          1/3
 Keš TTL:                  60 seconds
 ==================================================
 [ Nit 14 ] [ 21:19:06 ] Radnik 9: zahtev obrađen za 0ms
+[ Nit 40 ] [ 21:21:49 ] Radnik 9 završen.
+[ Nit 41 ] [ 21:21:49 ] Radnik 2 završen.
+[ Nit 41 ] [ 21:21:49 ] Radnik 6 završen.
+[ Nit 41 ] [ 21:21:49 ] Radnik 4 završen.
+[ Nit 41 ] [ 21:21:49 ] Radnik 1 završen.
+[ Nit 41 ] [ 21:21:49 ] Radnik 8 završen.
+[ Nit 41 ] [ 21:21:49 ] Radnik 3 završen.
+[ Nit 41 ] [ 21:21:49 ] Radnik 5 završen.
+[ Nit 41 ] [ 21:21:49 ] Radnik 0 završen.
+[ Nit 41 ] [ 21:21:49 ] Radnik 7 završen.
+[ Nit 36 ] [ 21:21:49 ] Server je isključen.
+--------------------------------------------------------------------------------
+[ Nit 2 ] [ 21:21:59 ] Keš cleanup nit je pokrenuta.
+[ Nit 2 ] [ 21:21:59 ] Server je pokrenut.
+[ Nit 2 ] [ 21:21:59 ] Radnik 0 pokrenut.
+[ Nit 2 ] [ 21:21:59 ] Radnik 1 pokrenut.
+[ Nit 2 ] [ 21:21:59 ] Radnik 2 pokrenut.
+[ Nit 2 ] [ 21:21:59 ] Radnik 3 pokrenut.
+[ Nit 2 ] [ 21:21:59 ] Radnik 4 pokrenut.
+[ Nit 2 ] [ 21:21:59 ] Radnik 5 pokrenut.
+[ Nit 2 ] [ 21:21:59 ] Radnik 6 pokrenut.
+[ Nit 2 ] [ 21:21:59 ] Radnik 7 pokrenut.
+[ Nit 2 ] [ 21:21:59 ] Radnik 8 pokrenut.
+[ Nit 2 ] [ 21:21:59 ] Radnik 9 pokrenut.
+[ Nit 10 ] [ 21:22:02 ] Isključivanje servera
+[ Nit 5 ] [ 21:22:02 ] Radnik 9 završen.
+[ Nit 5 ] [ 21:22:02 ] Radnik 8 završen.
+[ Nit 7 ] [ 21:22:02 ] Radnik 6 završen.
+[ Nit 7 ] [ 21:22:02 ] Radnik 5 završen.
+[ Nit 7 ] [ 21:22:02 ] Radnik 4 završen.
+[ Nit 7 ] [ 21:22:02 ] Radnik 3 završen.
+[ Nit 7 ] [ 21:22:02 ] Radnik 2 završen.
+[ Nit 7 ] [ 21:22:02 ] Radnik 1 završen.
+[ Nit 7 ] [ 21:22:02 ] Radnik 0 završen.
+[ Nit 11 ] [ 21:22:02 ] Radnik 7 završen.
+[ Nit 10 ] [ 21:22:02 ] Server je isključen.
+--------------------------------------------------------------------------------
+[ Nit 2 ] [ 21:23:05 ] Keš cleanup nit je pokrenuta.
+[ Nit 2 ] [ 21:23:05 ] Server je pokrenut.
+[ Nit 2 ] [ 21:23:05 ] Radnik 0 pokrenut.
+[ Nit 2 ] [ 21:23:05 ] Radnik 1 pokrenut.
+[ Nit 2 ] [ 21:23:05 ] Radnik 2 pokrenut.
+[ Nit 2 ] [ 21:23:05 ] Radnik 3 pokrenut.
+[ Nit 2 ] [ 21:23:05 ] Radnik 4 pokrenut.
+[ Nit 2 ] [ 21:23:05 ] Radnik 5 pokrenut.
+[ Nit 2 ] [ 21:23:05 ] Radnik 6 pokrenut.
+[ Nit 2 ] [ 21:23:05 ] Radnik 7 pokrenut.
+[ Nit 2 ] [ 21:23:05 ] Radnik 8 pokrenut.
+[ Nit 2 ] [ 21:23:05 ] Radnik 9 pokrenut.
+[ Nit 7 ] [ 21:23:05 ] Primljen novi zahtev: http://localhost:8080/?q=food
+[ Nit 7 ] [ 21:23:05 ] Keš promašaj za ključ: food. Pokrećem async API poziv...
+[ Nit 7 ] [ 21:23:06 ] API poziv uspešno završen za ključ: food, dobijeno 10 članaka.
+[ Nit 7 ] [ 21:23:06 ] Zahtev je obrađen.
+[ Nit 7 ] [ 21:23:06 ] Radnik 0: zahtev obrađen za 783ms
+[ Nit 7 ] [ 21:23:50 ] Primljen novi zahtev: http://localhost:8080/?q=sport
+[ Nit 7 ] [ 21:23:50 ] Keš promašaj za ključ: sport. Pokrećem async API poziv...
+[ Nit 7 ] [ 21:23:50 ] API poziv uspešno završen za ključ: sport, dobijeno 10 članaka.
+[ Nit 7 ] [ 21:23:50 ] Zahtev je obrađen.
+[ Nit 7 ] [ 21:23:50 ] Radnik 1: zahtev obrađen za 512ms
+[ Nit 10 ] [ 21:23:51 ] Primljen novi zahtev: http://localhost:8080/?q=sport
+[ Nit 10 ] [ 21:23:51 ] Keš pogodak za ključ: sport
+[ Nit 10 ] [ 21:23:51 ] Zahtev je obrađen.
+[ Nit 10 ] [ 21:23:51 ] Radnik 2: zahtev obrađen za 1ms
