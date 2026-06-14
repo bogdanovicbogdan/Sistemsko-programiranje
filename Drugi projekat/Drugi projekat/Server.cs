@@ -88,6 +88,11 @@ namespace Drugi_projekat
                 Logger.Log($"Greška radnika pri gašenju: {ex.Message}");
             }
 
+            _cache.Dispose();
+
+            Logger.Log("Server je isključen.");
+            Logger.PrekiniSve();
+
             await logovanjeTask;
         }
 
@@ -133,11 +138,7 @@ namespace Drugi_projekat
             _aktivan = false;
             _cts.Cancel();
             _listener.Stop();
-
             _redZahteva.PrekiniSve();
-            _cache.Dispose();
-            Logger.Log("Server je isključen.");
-            Logger.PrekiniSve();
         }
 
         private static async Task ObradiZahtev(HttpListenerContext context)
